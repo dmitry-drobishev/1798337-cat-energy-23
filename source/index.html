@@ -9,17 +9,18 @@
   <body class="page__body">
 
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-img" src="./img/logo-header-img.svg" width="34" height="38" alt="Логотип cat energy">
-        <img class="page-header__logo-title" src="./img/logo-header-title.svg" width="101" height="18" alt="Заголовок cat energy">
-      </a>
+      <div class="page-header__row-wrapper">
+        <a class="page-header__logo">
+          <img class="page-header__logo-img" src="./img/logo-header-img.svg" width="34" height="38" alt="Логотип cat energy">
+          <img class="page-header__logo-title" src="./img/logo-header-title.svg" width="101" height="18" alt="Заголовок cat energy">
+        </a>
 
-      <nav class="main-nav">
-
-        <button class="main-nav__toggle" type="button">
+        <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
+      </div>
 
+      <nav class="main-nav">
         <div class="main_nav__inner">
           <ul class="main-nav__list">
 
@@ -44,12 +45,12 @@
       <h1 class="visually-hidden">"Cat energy" - питание для котов</h1>
 
       <section class="promo">
+        <div class="promo__background-wrapper">
+          <h2 class="promo__title">Функциональное питание для котов</h2>
+          <p class="promo__slogan">Занялся собой? Займись котом!</p>
+        </div>
 
-        <h2 class="promo__title">Функциональное питание для котов</h2>
-
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
-
-        <img class="promo__img" src="./img/promo/promo-food.jpg" width="280" height="270" alt="изображение упаковки питания cat energy">
+        <img class="promo__img" src="./img/promo/promo-food.png" width="280" height="270" alt="изображение упаковки питания cat energy">
 
         <a class="button promo__link" href="#">Подобрать программу</a>
       </section>
