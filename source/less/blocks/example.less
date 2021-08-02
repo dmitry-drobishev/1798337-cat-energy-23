@@ -1,8 +1,10 @@
 .example {
   background-color: @special_grey-5;
+  margin: 0;
+  margin-top: 42px;
 
   &__information-wrapper {
-    padding: 0 20px 0 20px;
+    padding: 27px 20px 0 20px;
   }
 
   &__title {
@@ -13,7 +15,10 @@
   }
 
   &__text {
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-weight: 400;
     margin: 0;
+    margin-top: 33px;
     font-size: 14px;
     line-height: 18px;
     color: @special_dark-grey;
@@ -21,6 +26,9 @@
 
   &__result {
     text-align: center;
+    margin: 0;
+    margin-top: 27px;
+    margin-bottom: 42px;
   }
 
   &__slider {
@@ -30,9 +38,55 @@
   &__slide--after {
     display: none;
   }
+
+  &__slider-buttons {
+    padding: 0 45px 25px 45px;
+    margin: 0;
+    margin-top: 23px;
+    align-items: baseline;
+    display: flex;
+    gap: 2px;
+  }
+
+  &__slider-toggle {
+    width: 84px;
+    height: 14px;
+    border: 1px solid @special_grey;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: @basic_white;
+    margin: 0;
+    padding: 3px 6px 3px 6px;
+  }
+
+  &__slider-handle {
+    width: 35px;
+    height: 6px;
+    background-color: @basic_green;
+    border-radius: 6px;
+
+    &--before {
+      margin-right: auto;
+      margin-left: 0;
+    }
+
+    &--after {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  &__slider-button {
+    border: none;
+    font-size: 16px;
+    line-height: 20px;
+    width: 70px;
+    height: 40px;
+    background-color: transparent;
+  }
 }
 
-.specification-list {
+.specification__list {
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -40,8 +94,27 @@
   margin: 0;
 }
 
-.specification-item {
-  margin: 0;
+.specification__item {
   width: 124px;
+  margin: 0;
+  margin-top: 25px;
   text-align: center;
+  border: 1px solid @special_grey;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.specification__item-value {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.specification__item-name {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: @special_dark-grey;
+  margin: 0;
+  margin-top: 10px;
 }

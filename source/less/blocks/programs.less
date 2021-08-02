@@ -2,6 +2,12 @@
   padding: 0 20px;
   margin-top: 22px;
 
+  &__title-wrapper {
+    display: flex;
+    gap: 20px;
+    padding-top: 24px;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -27,9 +33,14 @@
     background-color: @basic_green;
   }
 
+  &__img {
+    position: absolute;
+  }
+
   &__title {
     font-size: 24px;
     line-height: 37px;
+    text-transform: uppercase;
     margin: 0;
   }
 
@@ -40,13 +51,20 @@
     color: @special_dark-grey;
     width: 227px;
     margin: 0;
+    margin-top: 22px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid @special_grey-6;
   }
 
   &__link {
+    display: block;
     font-size: 16px;
     line-height: 16px;
     text-transform: uppercase;
     text-decoration: none;
     color: @basic_black;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    margin: 0;
   }
 }
