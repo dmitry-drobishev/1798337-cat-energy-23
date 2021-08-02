@@ -1,0 +1,36 @@
+.product-card {
+  min-height: 190px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 13px;
+  margin: 0;
+  padding: 20px 20px 25px 20px;
+  border-bottom: 1px solid @special_grey-4;
+
+  &__img {
+    display: block;
+    margin: auto;
+  }
+
+  &__title {
+    width: 80px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__table {
+    margin: 0;
+    margin-top: 18px;
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: @special_dark-grey;
+  }
+
+  &__button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
