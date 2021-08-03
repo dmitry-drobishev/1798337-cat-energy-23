@@ -10,6 +10,7 @@
     &--hint {
       padding: 0 20px 0 20px;
       margin-top: 37px;
+      margin-bottom: 39px;
     }
 
     &--footnote {
@@ -22,8 +23,34 @@
 
   &__list {
     margin: 0;
+    margin-bottom: 26px;
     padding: 0 20px 0 20px;
     list-style: none;
+
+    &--radio {
+      padding: 22px 20px 20px 20px;
+      border-top: 1px solid @special_grey-6;
+      border-bottom: 1px solid @special_grey-6;
+    }
+
+    &--contacts {
+      margin-top: 35px;
+    }
+
+    &--optional {
+      margin-top: 34px;
+      margin-bottom: 34px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 13px;
+    display: flex;
+    align-items: baseline;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__label {
@@ -31,11 +58,43 @@
     line-height: 18px;
     text-transform: uppercase;
     color: @special_dark-grey;
+    margin-right: 10px;
+
+    &--radio {
+      margin-left: 15px;
+    }
+
+    &--checkbox {
+      margin-left: 15px;
+    }
+  }
+
+  &__input {
+    font-family: "Oswald", "Arial", sans-serif;
+    padding: 13px 15px;
+    font-size: 16px;
+    line-height: 18px;
+    border: 1px solid @special_grey-7;
+    color: @special_dark-grey;
+    box-sizing: border-box;
+    width: 100%;
+    text-transform: uppercase;
   }
 
   &__subtitle {
     margin: 0;
+    padding-left: 20px;
     font-size: 24px;
     line-height: 26px;
+  }
+
+  &__message {
+    margin: 37px 0 23px 0;
+    padding: 0 20px 0 20px;
+
+    &-textarea {
+      height: 150px;
+      resize: none;
+    }
   }
 }
