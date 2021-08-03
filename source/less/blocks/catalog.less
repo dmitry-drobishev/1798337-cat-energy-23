@@ -1,11 +1,15 @@
 .product-card {
-  min-height: 190px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 13px;
   margin: 0;
   padding: 20px 20px 25px 20px;
   border-bottom: 1px solid @special_grey-4;
+
+  &__description {
+    margin: 0;
+    min-height: 112px;
+  }
 
   &__img {
     display: block;
@@ -18,9 +22,15 @@
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+
+    &--last {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__table {
+    width: 100%;
     margin: 0;
     margin-top: 18px;
     font-family: "Arial", "Helvetica", sans-serif;
@@ -32,5 +42,34 @@
   &__button {
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+
+  &__table-value {
+    text-align: right;
+  }
+
+  &--last {
+    display: block;
+  }
+
+  &__icon {
+    display: block;
+    margin: 0 auto 23px auto;
+  }
+
+  &__text {
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: @special_dark-grey;
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 21px;
+    text-align: center;
+  }
+
+  &__button--last {
+    background-color: @basic_grey;
+    color: @special_dark-grey;
   }
 }
