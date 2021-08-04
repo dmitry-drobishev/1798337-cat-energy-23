@@ -3,17 +3,18 @@
   min-height: 65px;
   box-sizing: border-box;
   margin: 0;
-  padding-top: 10px;
+  outline: 2px solid @status_error;
+  outline-offset: -2px;
+
+  &__row-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 17px 20px;
+  }
 
   &__logo {
     display: flex;
     align-items: center;
     gap: 57px;
-  }
-
-  &__row-wrapper {
-    padding: 0 20px 17px 20px;
-    display: flex;
-    justify-content: space-between;
   }
 }
