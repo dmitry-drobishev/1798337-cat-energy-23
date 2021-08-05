@@ -1,38 +1,40 @@
 .promo {
-  width: 100%;
+  margin: 0;
+}
 
-  &__background-wrapper {
-    height: 302px;
-    background-color: @special_green-1;
-    padding-top: 27px;
-  }
+.promo__background-wrapper {
+  height: 302px;
+  // background: @special_green-1 url("../img/promo/promo-background.jpg") no-repeat center top;
+  background-color: @special_green-1;
+  padding-top: 27px;
+  box-sizing: border-box;
+}
 
-  &__title {
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 36px;
-    text-align: center;
-    color: @basic_white;
-    margin: 0;
-  }
+.promo__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: @basic_white;
+  margin: 0;
+}
 
-  &__slogan {
-    font-size: 14px;
-    line-height: 14px;
-    text-transform: uppercase;
-    text-align: center;
-    color: @basic_white;
-    margin-top: 25px;
-  }
+.promo__slogan {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @basic_white;
+  margin-top: 25px;
+}
 
-  &__img {
-    display: block;
-    margin: -167px auto 3px auto;
-  }
+.promo__img {
+  display: block;
+  margin: -167px auto 3px auto;
+}
 
-  &__link {
-    line-height: 18px;
-    font-size: 14px;
-    padding: 11px 0 11px 0;
-  }
+.promo__button {
+  line-height: 18px;
+  font-size: 14px;
+  padding: 11px 0 11px 0;
 }
