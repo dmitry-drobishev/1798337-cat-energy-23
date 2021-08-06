@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
+    <link rel="stylesheet" href="./css/style.css">
+
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
 
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-img" src="./img/logo-header-img.svg" width="34" height="38" alt="Логотип cat energy">
-        <img class="page-header__logo-title" src="./img/logo-header-title.svg" width="101" height="18" alt="Заголовок cat energy">
-      </a>
+      <div class="page-header__row-wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-img" src="./img/logo-header-img.svg" width="34" height="38" alt="Логотип cat energy">
+          <img class="page-header__logo-title" src="./img/logo-header-title.svg" width="101" height="18" alt="Заголовок cat energy">
+        </a>
 
-      <nav class="main-nav">
-
-        <button class="main-nav__toggle" type="button">
+        <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
+      </div>
 
+      <nav class="main-nav">
         <div class="main_nav__inner">
           <ul class="main-nav__list">
 
             <li class="main-nav__item">
-              <a href="#">главная</a>
+              <a href="index.html">главная</a>
             </li>
 
             <li class="main-nav__item">
-              <a href="#">каталог продукции</a>
+              <a href="catalog.html">каталог продукции</a>
             </li>
 
             <li class="main-nav__item">
-              <a href="#">подбор программы</a>
+              <a href="form.html">подбор программы</a>
             </li>
           </ul>
         </div>
@@ -39,7 +42,7 @@
 
     <main class="page-main">
 
-      <h1 class="page-main__title">Подбор программы</h1>
+      <h1 class="page-main__title page-main__title--form">Подбор программы</h1>
 
       <section class="page-main__form">
 
@@ -65,7 +68,7 @@
             </li>
           </ul>
 
-          <ul class="form__list">
+          <ul class="form__list form__list--radio">
 
             <li class="form__item">
               <input class="form__radio-input" type="radio" id="slim" value="lose-weight" name="program" checked>
@@ -83,9 +86,9 @@
             </li>
           </ul>
 
-          <h3 class="form__subtitle">Контактные данные (владельца кота)</h3>
+          <h3 class="form__subtitle">Контактные данные <br> (владельца кота)</h3>
 
-          <ul class="form__list">
+          <ul class="form__list form__list--contacts">
 
             <li class="form__item">
               <label class="form__label" for="mail">E-mail:*</label>
@@ -102,12 +105,12 @@
 
           <div class="form__message">
             <label class="visually-hidden" for="msg">Описание повадок кота</label>
-            <textarea class="form__message-textarea" id="msg" name="message" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="form__input form__input--textarea" id="msg" name="message" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
 
           <h3 class="form__subtitle">Дополнительно</h3>
 
-          <ul class="form__list">
+          <ul class="form__list form__list--optional">
             <li class="form__item">
               <input class="form__checkbox-input" type="checkbox" id="sweetener" name="sugar-subtitute" checked>
               <label class="form__label form__label--checkbox" for="sweetener">Сахарозаменитель</label>
@@ -136,16 +139,17 @@
       </section>
 
       <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__text">приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1627216695943!5m2!1sru!2sru" width="320" height="362" allowfullscreen></iframe>
+        <div class="contacts__wrapper">
+          <p class="contacts__text">приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1627216695943!5m2!1sru!2sru" width="100%" height="362" allowfullscreen></iframe>
       </section>
     </main>
 
     <footer class="page-footer">
 
-      <a class="page-footer__logo" href="index.html"><img src="./img/logo-footer.svg" width="128" height="24" alt="Логотип cat energy"></a>
+      <a class="page-footer__logo"><img src="./img/logo-footer.svg" width="128" height="24" alt="Логотип cat energy"></a>
 
       <section class="social">
 
@@ -181,7 +185,7 @@
       </section>
 
       <section class="copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
           <p class="copyright__title">HTML academy</p>
           <img class="copyright__img" src="./img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML academy">
         </a>
