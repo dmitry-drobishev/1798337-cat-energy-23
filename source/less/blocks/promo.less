@@ -17,6 +17,12 @@
   text-align: center;
   color: @basic_white;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: @basic_black;
+  }
 }
 
 .promo__slogan {
@@ -26,10 +32,18 @@
   text-align: center;
   color: @basic_white;
   margin-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic_black;
+  }
 }
 
 .promo__img {
   display: block;
+  width: 280px;
+  height: 270px;
   margin: -167px auto 3px auto;
 }
 

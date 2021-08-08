@@ -9,12 +9,26 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 478px;
+  }
 }
 
 .main-nav__item {
   width: 100%;
-  padding: 22px 0 24px 0;
   border-top: 1px solid @special_grey-4;
+
+  @media (min-width: @tablet-width) {
+    width: min-content;
+    border-top: none;
+  }
 }
 
 .main-nav__item a {
@@ -27,4 +41,11 @@
   text-decoration: none;
   color: @basic_black;
   margin: 0 auto;
+  padding: 22px 0 24px 0;
+  white-space: nowrap;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

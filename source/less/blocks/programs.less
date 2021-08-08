@@ -2,12 +2,32 @@
   padding: @mobile-padding;
   margin: 0;
   margin-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding: @tablet-padding;
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: @desktop-padding;
+    margin-top: 82px;
+  }
 }
 
 .programs__title-wrapper {
   display: flex;
   gap: 20px;
   padding-top: 24px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding-top: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    padding-top: 92px;
+  }
 }
 
 .programs__list {
@@ -17,12 +37,27 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    gap: 80px;
+  }
 }
 
 .programs__item {
   padding: @mobile-padding;
   min-height: 266px;
   background-color: @basic_grey;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
 }
 
 .programs__icon-background {
@@ -33,10 +68,50 @@
   height: 50px;
   border-radius: 50%;
   background-color: @basic_green;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .programs__img {
   position: absolute;
+
+  &--slim {
+    width: 36px;
+    height: 50px;
+
+    @media (min-width: @tablet-width) {
+      width: 140px;
+      height: 194px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 70px;
+      height: 97px;
+    }
+  }
+
+  &--pro {
+    width: 67px;
+    height: 28px;
+
+    @media (min-width: @tablet-width) {
+      width: 268px;
+      height: 112px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 56px;
+    }
+  }
 }
 
 .programs__title {
@@ -45,6 +120,11 @@
   line-height: 37px;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .programs__text {
@@ -56,6 +136,11 @@
   margin-top: 22px;
   padding-bottom: 23px;
   border-bottom: 1px solid @special_grey-6;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .programs__link {
@@ -68,4 +153,9 @@
   padding-top: 15px;
   padding-bottom: 18px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

@@ -1,5 +1,13 @@
 .information {
   padding: @mobile-padding;
+
+  @media (min-width: @tablet-width) {
+    padding: @tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: @desktop-padding;
+  }
 }
 
 .information__title {
@@ -18,11 +26,43 @@
   margin: 0;
   margin-top: 38px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .information__item {
+  position: relative;
   display: flex;
   gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    gap: 31px;
+    min-height: 280px;
+  }
+}
+
+.information__number {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: 113px;
+    font-size: 280px;
+    line-height: 280px;
+    color: @basic_grey;
+    z-index: -1;
+    margin: 0;
+  }
 }
 
 .information__background-icon {
@@ -32,6 +72,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .information__text {
@@ -41,4 +86,9 @@
   color: @special_dark-grey;
   margin: 0;
   max-width: 200px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
