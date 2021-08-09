@@ -1,5 +1,6 @@
 .information {
   padding: @mobile-padding;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     padding: @tablet-padding;
@@ -16,6 +17,16 @@
   font-weight: 400;
   margin: 0;
   margin-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 71px;
+  }
 }
 
 .information__list {
@@ -30,10 +41,13 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
   }
 }
 
@@ -46,6 +60,7 @@
     flex-direction: column;
     gap: 31px;
     min-height: 280px;
+    width: 250px;
   }
 }
 

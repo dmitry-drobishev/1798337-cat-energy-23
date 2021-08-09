@@ -1,6 +1,10 @@
 .copyright {
   width: 100%;
   padding: 20px 0 20px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .copyright__link {
@@ -8,6 +12,11 @@
   justify-content: space-between;
   align-self: center;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+    gap: 22px;
+  }
 }
 
 .copyright__title {

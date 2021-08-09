@@ -2,6 +2,14 @@
   background-color: @special_grey-5;
   margin: 0;
   margin-top: 42px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 69px;
+  }
 }
 
 .example__information-wrapper {
@@ -13,6 +21,11 @@
   font-size: 36px;
   line-height: 40px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .example__text {
@@ -22,12 +35,22 @@
   color: @special_dark-grey;
   margin: 0;
   margin-top: 33px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__result {
   text-align: center;
   margin: 0;
   margin-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .example__slider {
@@ -109,6 +132,11 @@
   border: 1px solid @special_grey;
   margin: 0;
   padding: 15px 0 18px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__specification-name {
@@ -120,4 +148,9 @@
   color: @special_dark-grey;
   margin: -10px auto 0 auto;
   background-color: @special_grey-5;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 314px;
+  }
 }

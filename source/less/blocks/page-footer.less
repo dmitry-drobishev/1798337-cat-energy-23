@@ -7,8 +7,24 @@
   padding: @mobile-padding;
   outline: 2px solid @status_error;
   outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 150px;
+    margin: auto 0;
+    padding: @tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: @desktop-padding;
+  }
 }
 
 .page-footer__logo {
   margin: 39px 0 32px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
