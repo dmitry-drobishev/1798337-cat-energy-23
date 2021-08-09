@@ -13,7 +13,20 @@
 }
 
 .example__information-wrapper {
-  padding: 27px 20px 0 20px;
+  width: 280px;
+  padding: @mobile-padding;
+  padding-top: 27px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding: @tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding: @desktop-padding;
+  }
 }
 
 .example__title {
@@ -39,6 +52,11 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    margin-top: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 146px;
   }
 }
 
@@ -54,8 +72,20 @@
 }
 
 .example__slider {
-  margin: 0;
+  width: 280px;
+  margin: 0 auto;
   margin-top: 42px;
+  padding: @mobile-padding;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding: @tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding: @desktop-padding;
+  }
 }
 
 .example__slide--after {
