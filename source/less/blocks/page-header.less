@@ -1,11 +1,13 @@
 .page-header {
+  width: 320px;
   min-height: 65px;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   outline: 2px solid @status_error;
   outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
+    width: 768px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,6 +17,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 1440px;
     min-height: 109px;
     padding: @desktop-padding;
     padding-top: 53px;

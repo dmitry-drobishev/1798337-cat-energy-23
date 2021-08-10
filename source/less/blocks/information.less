@@ -2,6 +2,8 @@
   padding: @mobile-padding;
   width: 280px;
   margin: 0 auto;
+  outline: 2px solid @status_error;
+  outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
     width: 708px;
@@ -44,13 +46,13 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
+    column-gap: 60px;
+    row-gap: 37px;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
   }
 }
 
@@ -63,7 +65,6 @@
     flex-direction: column;
     gap: 31px;
     min-height: 280px;
-    width: 250px;
   }
 }
 

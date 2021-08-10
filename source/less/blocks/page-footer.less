@@ -1,22 +1,29 @@
 .page-footer {
+  background-color: @basic_grey;
+  margin: 0;
+}
+
+.page-footer__wrapper {
+  width: 280px;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: @basic_grey;
-  margin: 0;
-  padding: @mobile-padding;
+  margin: 0 auto;
   outline: 2px solid @status_error;
   outline-offset: -2px;
+  padding: @mobile-padding;
 
   @media (min-width: @tablet-width) {
+    width: 708px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     min-height: 150px;
-    margin: auto 0;
     padding: @tablet-padding;
   }
 
   @media (min-width: @desktop-width) {
+    width: 1220px;
     padding: @desktop-padding;
   }
 }

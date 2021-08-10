@@ -1,15 +1,21 @@
 .contacts {
   position: relative;
+  margin: 0;
 }
 
 .contacts__wrapper {
   display: flex;
   justify-content: space-between;
+  width: 320px;
+  box-sizing: border-box;
   padding: @mobile-padding;
-  margin: 28px 0 26px 0;
+  margin: 28px auto 26px auto;
+  outline: 2px solid @status_error;
+  outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 70px 0 70px;
+    width: 768px;
+    padding: 0 70px;
   }
 
   @media (min-width: @desktop-width) {
