@@ -1,9 +1,12 @@
 .promo {
   margin: 0 auto;
   position: relative;
+  // border
+  outline: 2px solid @status_error;
+  outline-offset: -2px;
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
+    min-height: 694px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: -109px;
@@ -12,35 +15,35 @@
 }
 
 .promo__content-wrapper {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  width: 320px;
   padding: @mobile-padding;
-  box-sizing: border-box;
+  margin: 0 auto;
+  // border
+  outline: 2px solid @status_error;
+  outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
     padding: @tablet-padding;
+    padding-left: 197px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
+    width: 530px;
     padding: 0;
-    padding-top: 109px;
+    margin: 109px 0 0 auto;
   }
 }
-
 
 .promo__background-wrapper {
   height: 302px;
   width: 100%;
-  margin: 0;
   // background: @special_green-1 url("../img/promo/promo-background.jpg") no-repeat center top;
   background-color: @special_green-1;
   position: absolute;
   top: 0;
   z-index: -1;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -48,7 +51,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    height: 694px;
+    height: 100%;
     position: static;
   }
 }
@@ -66,6 +69,11 @@
     font-size: 60px;
     line-height: 60px;
     color: @basic_black;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
   }
 }
 
@@ -75,12 +83,19 @@
   text-transform: uppercase;
   text-align: center;
   color: @basic_white;
+  margin: 0;
   margin-top: 25px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     color: @basic_black;
+    text-align: left;
+    margin-top: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
   }
 }
 
@@ -88,7 +103,7 @@
   display: block;
   width: 280px;
   height: 270px;
-  margin: 29px auto 3px auto;
+  margin: 29px auto 0 auto;
 
   @media (min-width: @tablet-width) {
     margin-top: -83px;
@@ -98,10 +113,11 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    margin-top: 0;
+    left: 50%;
     top: 250px;
-    left: 550px;
     z-index: 1;
+    margin: 0;
+    margin-left: -140px;
   }
 }
 
@@ -109,4 +125,9 @@
   line-height: 18px;
   font-size: 14px;
   padding: 11px 0 11px 0;
+  margin-top: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin: 47px auto 0 0;
+  }
 }

@@ -1,17 +1,18 @@
 .information {
   padding: @mobile-padding;
-  width: 280px;
+  // width: 280px;
+  box-sizing: border-box;
   margin: 0 auto;
   outline: 2px solid @status_error;
   outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
+    width: @tablet-width;
     padding: @tablet-padding;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    width: @desktop-width;
     padding: @desktop-padding;
   }
 }
@@ -59,10 +60,12 @@
 .information__item {
   position: relative;
   display: flex;
+  align-items: center;
   gap: 20px;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
+    align-items: stretch;
     gap: 31px;
     min-height: 280px;
   }
@@ -75,7 +78,7 @@
     display: block;
     position: absolute;
     top: -30px;
-    left: 113px;
+    right: 112px;
     font-size: 280px;
     line-height: 280px;
     color: @basic_grey;
