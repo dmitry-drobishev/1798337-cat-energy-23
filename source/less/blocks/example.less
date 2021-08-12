@@ -1,19 +1,9 @@
 .example {
   background-color: @special_grey-5;
   margin: 0;
-  margin-top: 42px;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 45px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 69px;
-  }
 }
 
 .example__wrapper {
-  // width: 320px;
   padding-top: 27px;
   box-sizing: border-box;
   margin: 0 auto;
@@ -21,9 +11,7 @@
   outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
-    // width: 708px;
     padding: @tablet-padding;
-    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
