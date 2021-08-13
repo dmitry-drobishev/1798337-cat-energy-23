@@ -1,6 +1,5 @@
 .information {
   padding: @mobile-padding;
-  box-sizing: border-box;
   margin: 0 auto;
   outline: 2px solid @status_error;
   outline-offset: -2px;
@@ -9,9 +8,10 @@
     padding: @tablet-padding;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-breakpoint-width) {
     width: @desktop-width;
-    padding: @desktop-padding;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -28,7 +28,7 @@
     margin-top: 45px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-breakpoint-width) {
     margin-top: 71px;
   }
 }
@@ -49,7 +49,7 @@
     row-gap: 37px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-breakpoint-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
   }

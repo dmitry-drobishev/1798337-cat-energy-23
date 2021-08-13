@@ -1,25 +1,28 @@
 .page-header {
   width: 100%;
   min-height: 65px;
-  box-sizing: border-box;
   margin: 0 auto;
   outline: 2px solid @status_error;
   outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
+    width: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 78px;
+    min-height: 54px;
     padding: @tablet-padding;
     padding-top: 24px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-breakpoint-width) {
     width: @desktop-width;
-    min-height: 109px;
-    padding: @desktop-padding;
+    padding: 0;
+    min-height: 56px;
     padding-top: 53px;
+    z-index: 5;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

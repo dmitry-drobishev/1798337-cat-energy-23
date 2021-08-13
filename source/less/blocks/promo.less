@@ -5,7 +5,7 @@
   outline: 2px solid @status_error;
   outline-offset: -2px;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-breakpoint-width) {
     min-height: 694px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -28,9 +28,10 @@
     padding-left: 197px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-breakpoint-width) {
     width: 530px;
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
     margin: 109px 0 0 auto;
   }
 }
@@ -49,7 +50,7 @@
     display: none;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-breakpoint-width) {
     display: block;
     height: 100%;
     position: static;
@@ -72,7 +73,7 @@
     text-align: left;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-breakpoint-width) {
     margin-left: 0;
   }
 }
@@ -94,7 +95,7 @@
     margin-top: 41px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-breakpoint-width) {
     margin-left: 0;
   }
 }
@@ -111,7 +112,7 @@
     z-index: -1;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-breakpoint-width) {
     position: absolute;
     left: 50%;
     top: 250px;
