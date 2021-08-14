@@ -1,13 +1,52 @@
 .present {
   margin: 0;
   margin-top: 36px;
-  padding: 58px 20px 43px 20px;
+  padding: @mobile-padding;
+
+  @media (min-width: @tablet-width) {
+    padding: @tablet-padding;
+    margin-top: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-top: 0;
+  }
+}
+
+.present__wrapper {
+  padding: 58px 0 43px 0;
   background-color: @basic_green;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    gap: 265px;
+    justify-content: center;
+    align-items: center;
+    padding: 57px 0 61px 0;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    box-sizing: border-box;
+    display: block;
+    padding: 56px 0 42px 0;
+    margin: 0 auto;
+  }
 }
 
 .present__img {
   display: block;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+  }
 }
 
 .present__text {
@@ -18,4 +57,14 @@
   text-align: center;
   width: 165px;
   margin: 48px auto 0 auto;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    margin: 46px auto 0 auto;
+  }
 }
