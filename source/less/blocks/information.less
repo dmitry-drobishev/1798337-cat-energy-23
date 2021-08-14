@@ -1,0 +1,114 @@
+.information {
+  padding: @mobile-padding;
+  margin: 0 auto;
+  outline: 2px solid @status_error;
+  outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    padding: @tablet-padding;
+  }
+
+  @media (min-width: @desktop-breakpoint-width) {
+    width: @desktop-width;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.information__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 45px;
+  }
+
+  @media (min-width: @desktop-breakpoint-width) {
+    margin-top: 71px;
+  }
+}
+
+.information__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  margin-top: 38px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 37px;
+  }
+
+  @media (min-width: @desktop-breakpoint-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+.information__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 31px;
+    min-height: 280px;
+  }
+}
+
+.information__number {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: 112px;
+    font-size: 280px;
+    line-height: 280px;
+    color: @basic_grey;
+    z-index: -1;
+    margin: 0;
+  }
+}
+
+.information__background-icon {
+  width: 60px;
+  height: 60px;
+  background-color: @basic_green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.information__text {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: @special_dark-grey;
+  margin: 0;
+  max-width: 200px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
