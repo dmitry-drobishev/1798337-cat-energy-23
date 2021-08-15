@@ -19,7 +19,7 @@
     line-height: 60px;
     border: none;
     padding: @tablet-padding;
-    margin: 65px auto 82px auto;
+    margin: 65px auto 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -32,6 +32,10 @@
   &--form {
     border-bottom: none;
     padding-bottom: 37px;
+
+    @media (min-width: @tablet-width) {
+      padding: @tablet-form-padding;
+    }
   }
 }
 
