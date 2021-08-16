@@ -29,11 +29,11 @@
             </li>
 
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active">каталог продукции</a>
+              <a class="main-nav__link main-nav__link--active" href="catalog.html">каталог продукции</a>
             </li>
 
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active" href="form.html">подбор программы</a>
+              <a class="main-nav__link main-nav__link--active">подбор программы</a>
             </li>
           </ul>
         </div>
@@ -50,41 +50,43 @@
 
           <p class="form__text form__text--hint">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
 
-          <ul class="form__list">
+          <div class="form__questionnaire-wrapper">
+            <ul class="form__list form__list--questionnaire">
 
-            <li class="form__item">
-              <label class="form__label" for="name">Имя:*</label>
-              <input class="form__input" type="text" id="name" name="name_cat" placeholder="Барсик">
-            </li>
+              <li class="form__item">
+                <label class="form__label" for="name">Имя:*</label>
+                <input class="form__input" type="text" id="name" name="name_cat" placeholder="Барсик">
+              </li>
 
-            <li class="form__item">
-              <label class="form__label" for="weight">Вес (кг):*</label>
-              <input class="form__input" type="number" id="weight" name="weight-cat" placeholder="7">
-            </li>
+              <li class="form__item">
+                <label class="form__label" for="weight">Вес (кг):*</label>
+                <input class="form__input" type="number" id="weight" name="weight-cat" placeholder="7">
+              </li>
 
-            <li class="form__item">
-              <label class="form__label" for="age">Возраст (лет):</label>
-              <input class="form__input" type="number" id="age" name="age-cat" placeholder="7">
-            </li>
-          </ul>
+              <li class="form__item">
+                <label class="form__label" for="age">Возраст (лет):</label>
+                <input class="form__input" type="number" id="age" name="age-cat" placeholder="7">
+              </li>
+            </ul>
 
-          <ul class="form__list form__list--radio">
+            <ul class="form__list form__list--radio">
 
-            <li class="form__item">
-              <input class="form__radio-input" type="radio" id="slim" value="lose-weight" name="program" checked>
-              <label class="form__label form__label--radio" for="slim">Похудение</label>
-            </li>
+              <li class="form__item">
+                <input class="form__radio-input" type="radio" id="slim" value="lose-weight" name="program" checked>
+                <label class="form__label form__label--radio" for="slim">Похудение</label>
+              </li>
 
-            <li class="form__item">
-              <input class="form__radio-input" type="radio" id="fat" value="weight-gain" name="program">
-              <label class="form__label form__label--radio" for="fat">Набор массы</label>
-            </li>
+              <li class="form__item">
+                <input class="form__radio-input" type="radio" id="fat" value="weight-gain" name="program">
+                <label class="form__label form__label--radio" for="fat">Набор массы</label>
+              </li>
 
-            <li class="form__item">
-              <input class="form__radio-input" type="radio" id="dn" value="dont-know" name="program">
-              <label class="form__label form__label--radio" for="dn">Не знаю (нужен совет)</label>
-            </li>
-          </ul>
+              <li class="form__item">
+                <input class="form__radio-input" type="radio" id="dn" value="dont-know" name="program">
+                <label class="form__label form__label--radio" for="dn">Не знаю (нужен совет)</label>
+              </li>
+            </ul>
+          </div>
 
           <h3 class="form__subtitle">Контактные данные <br> (владельца кота)</h3>
 
