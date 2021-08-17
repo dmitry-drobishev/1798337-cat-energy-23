@@ -1,5 +1,22 @@
 .main-nav {
   margin: 0;
+  z-index: 10;
+
+  @media (max-width: @mobile-width-only) {
+    &--open {
+      position: absolute;
+      width: 100%;
+      background-color: @basic_white;
+    }
+
+    &--close {
+      display: none;
+    }
+
+    &--nojs {
+      display: block;
+    }
+  }
 }
 
 .main-nav__list {

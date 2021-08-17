@@ -15,28 +15,26 @@
           <img class="page-header__logo-title" src="./img/logo-header-title.svg" width="101" height="18" alt="Заголовок cat energy">
         </a>
 
-        <button class="page-header__toggle" type="button">
+        <button class="page-header__toggle page-header__toggle--open page-header__toggle--nojs" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
       </div>
 
-      <nav class="main-nav">
-        <div class="main_nav__inner">
-          <ul class="main-nav__list">
+      <nav class="main-nav main-nav--open main-nav--nojs">
+        <ul class="main-nav__list">
 
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active">главная</a>
-            </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active">главная</a>
+          </li>
 
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">каталог продукции</a>
-            </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">каталог продукции</a>
+          </li>
 
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">подбор программы</a>
-            </li>
-          </ul>
-        </div>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">подбор программы</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -154,7 +152,7 @@
               <img class="example__slide-img" src="./img/example/example-cat-fat.png" width="311" height="232" alt="Изображение кота до похудения">
             </div>
 
-            <div class="example__slide example__slide--after">
+            <div class="example__slide example__slide--after example__slide--active">
               <img class="example__slide-img" src="./img/example/example-cat-skinny.png" height="232" alt="Изображение кота после похудения">
             </div>
 
@@ -162,7 +160,7 @@
               <button class="example__slider-button example__slider-button--before">Было</button>
 
               <div class="example__slider-toggle">
-                <div class="example__slider-handle example__slider-handle--before"></div>
+                <div class="example__slider-handle example__slider-handle--after"></div>
               </div>
 
               <button class="example__slider-button example__slider-button--after">Стало</button>
@@ -226,5 +224,6 @@
         </section>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>
