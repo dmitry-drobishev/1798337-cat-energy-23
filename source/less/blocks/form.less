@@ -1,16 +1,33 @@
 .form {
   margin: 0;
+  outline: 2px solid @status_error;
+  outline-offset: -2px;
 }
 
 .form__text {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &--hint {
     padding: @mobile-padding;
     margin-bottom: 39px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 54px;
+      padding: @tablet-form-padding;
+    }
+
+    @media (min-width: @desktop-breakpoint-width) {
+      width: @desktop-width;
+      padding: 0;
+    }
   }
 
   &--footnote {
@@ -19,29 +36,89 @@
     text-transform: none;
     text-align: center;
     margin-top: 21px;
+
+    @media (min-width: @tablet-width) {
+      margin: auto 0;
+      font-size: 16px;
+      text-align: start;
+    }
   }
 }
 
 .form__list {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 26px;
   padding: @mobile-padding;
   list-style: none;
+  box-sizing: border-box;
+  outline: 2px solid @status_error;
+  outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    padding: @tablet-form-padding;
+  }
+
+  @media (min-width: @desktop-breakpoint-width) {
+    padding: 0;
+    margin-bottom: 65px;
+  }
+
+  &--questionnaire {
+    @media (min-width: @desktop-breakpoint-width) {
+      margin: 0;
+    }
+  }
 
   &--radio {
-    box-sizing: border-box;
     border-top: 1px solid @special_grey-6;
     border-bottom: 1px solid @special_grey-6;
     padding: 22px 20px 20px 20px;
+
+    @media (min-width: @tablet-width) {
+      margin: @tablet-form-padding;
+      margin-bottom: 65px;
+      border: 1px solid @special_grey-7;
+    }
+
+    @media (min-width: @desktop-breakpoint-width) {
+      margin: 0;
+    }
   }
 
   &--contacts {
     margin-top: 35px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 76px;
+    }
+
+    @media (min-width: @desktop-breakpoint-width) {
+      width: @desktop-width;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: baseline;
+    }
   }
 
   &--optional {
     margin-top: 34px;
     margin-bottom: 34px;
+
+    @media (min-width: @tablet-width) {
+      display: grid;
+      gap: 60px;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 32px;
+      margin-top: 57px;
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: @desktop-breakpoint-width) {
+      width: @desktop-width;
+      gap: 80px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
   }
 }
 
@@ -50,8 +127,31 @@
   align-items: baseline;
   margin-top: 13px;
 
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+  }
+
+  &--optional {
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
+  }
+
   &:first-child {
     margin-top: 0;
+  }
+}
+
+.form__questionnaire-wrapper {
+  @media (min-width: @desktop-breakpoint-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    width: @desktop-width;
+    margin: 0 auto;
+    margin-bottom: 65px;
+    outline: 2px solid @status_error;
+    outline-offset: -2px;
   }
 }
 
@@ -85,6 +185,10 @@
   text-transform: uppercase;
   padding: 13px 12px 13px 15px;
 
+  @media (min-width: @tablet-width) {
+    padding: 10px 20px;
+  }
+
   &--textarea {
     height: 150px;
     resize: none;
@@ -95,11 +199,61 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
-  margin: 0;
+  margin: 0 auto;
   padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: @tablet-form-padding;
+  }
+
+  @media (min-width: @desktop-breakpoint-width) {
+    width: @desktop-width;
+    padding: 0;
+  }
+
+  & br {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .form__message {
-  margin: 37px 0 23px 0;
+  margin: 37px auto 23px auto;
   padding: @mobile-padding;
+
+  @media (min-width: @tablet-width) {
+    margin: 76px auto 65px auto;
+    padding: @tablet-form-padding;
+  }
+
+  @media (min-width: @desktop-breakpoint-width) {
+    width: @desktop-width;
+    padding: 0;
+  }
+}
+
+.form__button {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.form__button-wrapper {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: @tablet-form-padding;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-breakpoint-width) {
+    width: @desktop-width;
+    gap: 80px;
+    padding: 0;
+  }
 }
