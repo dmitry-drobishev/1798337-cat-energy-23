@@ -47,4 +47,14 @@
   display: flex;
   align-items: center;
   gap: 57px;
+
+  @media (min-width: @desktop-breakpoint-width) {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
 }

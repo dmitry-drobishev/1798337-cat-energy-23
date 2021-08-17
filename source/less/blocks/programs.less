@@ -176,8 +176,8 @@
   text-decoration: none;
   color: @basic_black;
   padding-top: 15px;
-  // padding-bottom: 18px;
   margin: 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -188,5 +188,22 @@
 
   @media (min-width: @desktop-breakpoint-width) {
     margin-top: 27px;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    margin-left: 15px;
+    margin-top: -6px;
+    top: 50%;
+    width: 24px;
+    height: 10px;
+    background-image: url("../../img/programs/icon_programs_arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 }

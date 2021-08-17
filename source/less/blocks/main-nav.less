@@ -42,11 +42,36 @@
   margin: 0 auto;
   padding: 22px 0 24px 0;
   white-space: nowrap;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400px;
     padding: 0;
+
+    &:hover:not(.main-nav__link--active) {
+      opacity: 0.6;
+    }
+
+    &:active:not(.main-nav__link--active) {
+      opacity: 0.3;
+    }
+  }
+
+  &--active::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      bottom: -6px;
+      background-color: @basic_green;
+    }
+
+    @media (min-width: @desktop-breakpoint-width) {
+      background-color: @basic_white;
+    }
   }
 }
