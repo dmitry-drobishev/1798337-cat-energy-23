@@ -6,15 +6,40 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  text-align: center;
   border-top: 1px solid @special_grey-4;
   border-bottom: 1px solid @special_grey-4;
-  margin: 0;
-  padding: 27px 0 41px 0;
+  margin: 0 auto;
+  padding: @mobile-padding;
+  padding-top: 27px;
+  padding-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    border: none;
+    padding: @tablet-padding;
+    margin: 65px auto 0 auto;
+  }
+
+  @media (min-width: @desktop-breakpoint-width) {
+    width: @desktop-width;
+    padding: 0;
+    margin-top: 74px;
+  }
+
 
   &--form {
     border-bottom: none;
     padding-bottom: 37px;
+
+    @media (min-width: @tablet-width) {
+      padding: @tablet-form-padding;
+    }
+
+    @media (min-width: @desktop-breakpoint-width) {
+      width: @desktop-width;
+      padding: 0;
+    }
   }
 }
 

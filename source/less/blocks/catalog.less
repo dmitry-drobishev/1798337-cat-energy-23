@@ -1,0 +1,22 @@
+.catalog {
+  margin: 0 auto;
+  padding: @mobile-padding;
+  outline: 2px solid @status_error;
+  outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: @tablet-padding;
+    margin-top: 82px;
+  }
+
+  @media (min-width: @desktop-breakpoint-width) {
+    width: @desktop-width;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 62px;
+    padding: 0;
+  }
+}

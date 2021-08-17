@@ -1,6 +1,17 @@
 .contacts {
   position: relative;
   margin: 0;
+  margin-top: 35px;
+  background-color: @basic_grey;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 76px;
+  }
+
+  @media (min-width: @desktop-breakpoint-width) {
+    margin-top: 85px;
+    background-color: transparent;
+  }
 }
 
 .contacts__wrapper {
@@ -28,7 +39,7 @@
     top: 95px;
     left: 50%;
     background-color: @basic_white;
-    padding: 62px 89px 15px 76px;
+    padding: 62px 89px 51px 76px;
     margin: 0;
     margin-left: -550px;
   }
