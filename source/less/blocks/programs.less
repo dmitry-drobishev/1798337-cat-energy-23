@@ -2,9 +2,6 @@
   padding: @mobile-padding;
   margin: 0 auto;
   margin-top: 22px;
-  // border
-  outline: 2px solid @status_error;
-  outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
     padding: @tablet-padding;
@@ -57,7 +54,6 @@
   padding: @mobile-padding;
   padding-top: 24px;
   padding-bottom: 22px;
-  // min-height: 266px;
   box-sizing: border-box;
   background-color: @basic_grey;
   margin: 0 auto;
@@ -199,12 +195,19 @@
     content: "";
     position: absolute;
     margin-left: 15px;
-    margin-top: -6px;
     top: 50%;
-    width: 24px;
+    width: 32px;
     height: 12px;
     background-image: url("../../img/programs/icon_programs_arrow.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+
+    @media (min-width: @tablet-width) {
+      margin-top: -4px;
+    }
+  }
+
+  &:hover::after {
+    background-image: url("../../img/programs/icon_programs_arrow_hover.svg");
   }
 }

@@ -1,8 +1,6 @@
 .information {
   padding: @mobile-padding;
   margin: 0 auto;
-  outline: 2px solid @status_error;
-  outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
     padding: @tablet-padding;
@@ -47,6 +45,7 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
     row-gap: 37px;
+    margin-top: 72px;
   }
 
   @media (min-width: @desktop-breakpoint-width) {
@@ -110,5 +109,6 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    max-width: 245px;
   }
 }

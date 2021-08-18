@@ -3,8 +3,6 @@
   box-sizing: border-box;
   min-height: 65px;
   margin: 0 auto;
-  outline: 2px solid @status_error;
-  outline-offset: -2px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -45,7 +43,7 @@
 .page-header__toggle--close::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -10px;
   top: 10px;
   width: 24px;
   height: 2px;
@@ -59,7 +57,7 @@
     content: "";
     position: absolute;
     top: 18px;
-    left: 0;
+    left: -10px;
     width: 24px;
     height: 2px;
     background-color: @basic_black;
