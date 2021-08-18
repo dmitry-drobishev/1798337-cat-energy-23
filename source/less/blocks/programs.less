@@ -208,6 +208,8 @@
   }
 
   &:hover::after {
-    background-image: url("../../img/programs/icon_programs_arrow_hover.svg");
+    @media (min-width: @desktop-breakpoint-width) {
+      background-image: url("../../img/programs/icon_programs_arrow_hover.svg");
+    }
   }
 }
