@@ -1,7 +1,7 @@
 .social {
   width: 100%;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     width: auto;
   }
 }
@@ -16,16 +16,17 @@
   padding: 6px 0 7px 0;
   margin: 0;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     border: none;
     padding: 0;
   }
 }
 
-.social__item svg {
+.social__link {
+  display: block;
   padding: 17px;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-content) {
     &:hover path {
       fill: @basic_green;
     }

@@ -2,7 +2,7 @@
   margin: 0;
   z-index: 10;
 
-  @media (max-width: @mobile-width-only) {
+  @media (max-width: @mobile-max) {
     &--open {
       position: absolute;
       width: 100%;
@@ -26,13 +26,13 @@
   margin: 0;
   padding: 0;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     flex-direction: row;
     justify-content: space-between;
     width: 440px;
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
+  @media (min-width: @desktop) {
     width: 478px;
   }
 }
@@ -41,7 +41,7 @@
   width: 100%;
   border-top: 1px solid @special_grey-4;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     width: min-content;
     border-top: none;
   }
@@ -61,23 +61,23 @@
   white-space: nowrap;
   position: relative;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
     padding: 0;
 
-    &:hover:not(.main-nav__link--active) {
+    &:not(.main-nav__link--active):hover {
       opacity: 0.6;
     }
 
-    &:active:not(.main-nav__link--active) {
+    &:not(.main-nav__link--active):active {
       opacity: 0.3;
     }
   }
 
   &--active::after {
-    @media (min-width: @tablet-width) {
+    @media (min-width: @tablet) {
       content: "";
       position: absolute;
       width: 100%;
@@ -87,12 +87,12 @@
       background-color: @basic_green;
     }
 
-    @media (min-width: @desktop-breakpoint-width) {
+    @media (min-width: @desktop) {
       background-color: @basic_white;
     }
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
+  @media (min-width: @desktop) {
     color: @basic_white;
     font-size: 20px;
     line-height: 30px;

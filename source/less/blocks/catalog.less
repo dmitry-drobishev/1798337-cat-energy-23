@@ -4,7 +4,7 @@
   outline: 2px solid @status_error;
   outline-offset: -2px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -12,8 +12,8 @@
     margin-top: 82px;
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
-    width: @desktop-width;
+  @media (min-width: @desktop) {
+    width: @desktop-content;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
     row-gap: 62px;

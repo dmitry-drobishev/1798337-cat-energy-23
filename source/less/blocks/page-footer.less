@@ -10,15 +10,15 @@
   margin: 0 auto;
   padding: @mobile-padding;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     flex-direction: row;
     justify-content: space-between;
     min-height: 150px;
     padding: @tablet-padding;
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
-    width: @desktop-width;
+  @media (min-width: @desktop) {
+    width: @desktop-content;
     padding-left: 0;
     padding-right: 0;
   }
@@ -27,11 +27,11 @@
 .page-footer__logo {
   margin: 39px 0 32px 0;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     margin: 0;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-content) {
     &:hover {
       opacity: 0.8;
     }

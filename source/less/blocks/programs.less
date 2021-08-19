@@ -3,13 +3,13 @@
   margin: 0 auto;
   margin-top: 22px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     padding: @tablet-padding;
     margin-top: 0;
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
-    width: @desktop-width;
+  @media (min-width: @desktop) {
+    width: @desktop-content;
     margin-top: 82px;
     padding-left: 0;
     padding-right: 0;
@@ -20,11 +20,11 @@
   display: flex;
   gap: 20px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     display: block;
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
+  @media (min-width: @desktop) {
     display: flex;
     align-items: center;
     gap: 62px;
@@ -39,11 +39,11 @@
   margin: 0;
   padding: 0;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     gap: 30px;
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
+  @media (min-width: @desktop) {
     flex-direction: row;
     gap: 80px;
   }
@@ -58,13 +58,13 @@
   background-color: @basic_grey;
   margin: 0 auto;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     box-sizing: border-box;
     padding: 77px 316px 53px 52px;
     position: relative;
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
+  @media (min-width: @desktop) {
     width: 570px;
     padding: 47px 51px 55px 52px;
   }
@@ -79,7 +79,7 @@
   border-radius: 50%;
   background-color: @basic_green;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     position: absolute;
     right: 62px;
     top: 92px;
@@ -87,7 +87,7 @@
     height: 200px;
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
+  @media (min-width: @desktop) {
     position: static;
     width: 100px;
     height: 100px;
@@ -101,12 +101,12 @@
     width: 36px;
     height: 50px;
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @tablet) {
       width: 140px;
       height: 194px;
     }
 
-    @media (min-width: @desktop-breakpoint-width) {
+    @media (min-width: @desktop) {
       width: 70px;
       height: 97px;
     }
@@ -116,12 +116,12 @@
     width: 67px;
     height: 28px;
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @tablet) {
       width: 268px;
       height: 112px;
     }
 
-    @media (min-width: @desktop-breakpoint-width) {
+    @media (min-width: @desktop) {
       width: 134px;
       height: 56px;
     }
@@ -135,7 +135,7 @@
   text-transform: uppercase;
   margin: 0;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     font-size: 36px;
     line-height: 36px;
   }
@@ -151,14 +151,14 @@
   padding-bottom: 23px;
   border-bottom: 1px solid @special_grey-6;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     font-size: 16px;
     line-height: 24px;
     padding: 0;
     border: none;
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
+  @media (min-width: @desktop) {
     width: auto;
     margin-top: 39px;
   }
@@ -176,14 +176,14 @@
   position: relative;
   cursor: pointer;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     font-size: 20px;
     line-height: 30px;
     padding: 0;
     margin-top: 52px;
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
+  @media (min-width: @desktop) {
     margin-top: 27px;
 
     &:active {
@@ -202,13 +202,13 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @tablet) {
       margin-top: -4px;
     }
   }
 
   &:hover::after {
-    @media (min-width: @desktop-breakpoint-width) {
+    @media (min-width: @desktop) {
       background-image: url("../../img/programs/icon_programs_arrow_hover.svg");
     }
   }

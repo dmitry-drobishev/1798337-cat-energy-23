@@ -2,18 +2,18 @@
   margin: 0 auto;
   padding: @mobile-padding;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     padding: @tablet-padding;
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
-    width: @desktop-width;
+  @media (min-width: @desktop) {
+    width: @desktop-content;
     padding: 0;
   }
 }
 
 .catalog-further__wrapper {
-  @media (min-width: @desktop-breakpoint-width) {
+  @media (min-width: @desktop) {
     display: flex;
     justify-content: space-between;
     padding: 0;
@@ -29,7 +29,7 @@
   margin: 0;
   padding: 25px 0 36px 0;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     font-size: 36px;
     line-height: 36px;
     padding: 68px 0 80px 0;
@@ -41,7 +41,7 @@
   outline: 2px solid @status_error;
   outline-offset: -2px;
 
-  @media (min-width: @desktop-breakpoint-width) {
+  @media (min-width: @desktop) {
     width: 896px;
   }
 }
