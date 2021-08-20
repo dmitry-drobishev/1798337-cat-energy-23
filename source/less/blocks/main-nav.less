@@ -87,14 +87,25 @@
       background-color: @basic_green;
     }
 
-    @media (min-width: @desktop) {
-      background-color: @basic_white;
-    }
+    // @media (min-width: @desktop) {
+    //   background-color: @basic_white;
+    // }
   }
 
   @media (min-width: @desktop) {
-    color: @basic_white;
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.main-nav__index-link {
+  @media (min-width: @desktop) {
+    color: @basic_white;
+  }
+
+  &--active::after {
+    @media (min-width: @desktop) {
+      background-color: @basic_white;
+    }
   }
 }
