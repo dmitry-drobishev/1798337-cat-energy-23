@@ -198,7 +198,7 @@
     top: 50%;
     width: 32px;
     height: 12px;
-    background-image: url("../../img/programs/icon_programs_arrow.svg");
+    background-image: url("../img/programs/icon_programs_arrow.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 
@@ -209,7 +209,8 @@
 
   &:hover::after {
     @media (min-width: @desktop) {
-      background-image: url("../../img/programs/icon_programs_arrow_hover.svg");
+      transform: scaleX(1.33);
+      margin-left: 21px;
     }
   }
 }
