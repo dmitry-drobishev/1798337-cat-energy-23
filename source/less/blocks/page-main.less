@@ -13,7 +13,7 @@
   padding-top: 27px;
   padding-bottom: 41px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     font-size: 60px;
     line-height: 60px;
     border: none;
@@ -21,8 +21,8 @@
     margin: 65px auto 0 auto;
   }
 
-  @media (min-width: @desktop-breakpoint-width) {
-    width: @desktop-width;
+  @media (min-width: @desktop) {
+    width: @desktop-content;
     padding: 0;
     margin-top: 74px;
   }
@@ -32,12 +32,12 @@
     border-bottom: none;
     padding-bottom: 37px;
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @tablet) {
       padding: @tablet-form-padding;
     }
 
-    @media (min-width: @desktop-breakpoint-width) {
-      width: @desktop-width;
+    @media (min-width: @desktop) {
+      width: @desktop-content;
       padding: 0;
     }
   }
