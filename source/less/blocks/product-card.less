@@ -13,7 +13,7 @@
     display: flex;
     gap: 0;
     flex-direction: column;
-    background-color: @basic_grey;
+    background-image: linear-gradient(to bottom, transparent 0, transparent 81px, @basic_grey 81px, @basic_grey 100%);
     padding: 0 36px 39px 36px;
   }
 
@@ -21,8 +21,10 @@
     display: block;
 
     @media (min-width: @tablet) {
+      min-height: 429px;
+      margin-top: 81px;
       display: flex;
-      background-color: transparent;
+      background-image: none;
       border: 2px solid @basic_grey;
       box-sizing: border-box;
     }

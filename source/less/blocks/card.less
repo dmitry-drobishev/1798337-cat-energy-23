@@ -11,7 +11,11 @@
   @media (min-width: @tablet) {
     padding: 27px 38px;
     border: 1px solid @special_grey;
-    box-sizing: border-box;
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid @special_grey;
+    }
   }
 
   @media (min-width: @desktop) {
@@ -22,6 +26,10 @@
     border-bottom: 1px solid @special_grey-5;
     padding: 0;
     align-items: center;
+
+    &:first-child {
+      border-top: 1px solid @special_grey-5;
+    }
   }
 }
 
