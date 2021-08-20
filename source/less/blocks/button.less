@@ -13,4 +13,15 @@
   margin: 0 auto;
   padding: 10px 0 10px 0;
   border: none;
+  cursor: pointer;
+
+  @media (min-width: @desktop) {
+    &:hover {
+      background-color: @basic_green-2;
+    }
+
+    &:active {
+      color: fade(@basic_white, 30%);
+    }
+  }
 }

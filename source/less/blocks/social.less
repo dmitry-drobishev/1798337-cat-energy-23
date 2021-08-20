@@ -1,20 +1,38 @@
 .social {
   width: 100%;
+
+  @media (min-width: @tablet) {
+    width: auto;
+  }
 }
 
 .social__list {
   display: flex;
   justify-content: center;
-  gap: 34px;
   list-style: none;
   box-sizing: border-box;
   border-bottom: 1px solid @special_grey-6;
   border-top: 1px solid @special_grey-6;
-  padding: 23px 0 24px 0;
+  padding: 6px 0 7px 0;
   margin: 0;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet) {
     border: none;
     padding: 0;
+  }
+}
+
+.social__link {
+  display: block;
+  padding: 17px;
+
+  @media (min-width: @desktop-content) {
+    &:hover path {
+      fill: @basic_green;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
