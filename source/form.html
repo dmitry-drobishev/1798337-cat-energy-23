@@ -15,12 +15,12 @@
           <img class="page-header__logo-title" src="./img/logo-header-title.svg" width="101" height="18" alt="Заголовок cat energy">
         </a>
 
-        <button class="page-header__toggle" type="button">
+        <button class="page-header__toggle page-header__toggle--close page-header__toggle--nojs" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
       </div>
 
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--close main-nav--nojs">
         <div class="main_nav__inner">
           <ul class="main-nav__list">
 
@@ -71,18 +71,18 @@
 
             <ul class="form__list form__list--radio">
 
-              <li class="form__item">
-                <input class="form__radio-input" type="radio" id="slim" value="lose-weight" name="program" checked>
+              <li class="form__item form__item--radio">
+                <input class="form__radio-input visually-hidden" type="radio" id="slim" value="lose-weight" name="program" checked>
                 <label class="form__label form__label--radio" for="slim">Похудение</label>
               </li>
 
-              <li class="form__item">
-                <input class="form__radio-input" type="radio" id="fat" value="weight-gain" name="program">
+              <li class="form__item form__item--radio">
+                <input class="form__radio-input visually-hidden" type="radio" id="fat" value="weight-gain" name="program">
                 <label class="form__label form__label--radio" for="fat">Набор массы</label>
               </li>
 
-              <li class="form__item">
-                <input class="form__radio-input" type="radio" id="dn" value="dont-know" name="program">
+              <li class="form__item form__item--radio">
+                <input class="form__radio-input visually-hidden" type="radio" id="dn" value="dont-know" name="program">
                 <label class="form__label form__label--radio" for="dn">Не знаю (нужен совет)</label>
               </li>
             </ul>
@@ -95,11 +95,29 @@
             <li class="form__item">
               <label class="form__label" for="mail">E-mail:*</label>
               <input class="form__input form__input--mail"  type="email" id="mail" name="e-mail" placeholder="kuklachev@gmail.com">
+              <svg class="form__input-svg form__input-svg--mail" width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="1.65" y1="5.84766" x2="1.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
+                <line x1="18.65" y1="5.84766" x2="18.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
+                <line x1="1" y1="13.1977" x2="19" y2="13.1977" stroke="#222222" stroke-width="1.3"/>
+                <line x1="1" y1="1.19766" x2="19" y2="1.19766" stroke="#222222" stroke-width="1.3"/>
+                <path d="M18.35 3.02975L10 9.5242L1.65 3.02975V1.49766H4.5L10 1.49766H15H18.35V3.02975Z" stroke="#222222" stroke-width="1.3"/>
+              </svg>
             </li>
 
             <li class="form__item">
               <label class="form__label" for="phone">Телефон:*</label>
               <input class="form__input form__input--phone" type="tel" id="phone" name="phone-number" placeholder="8 (960) 900-60-90">
+              <svg class="form__input-svg form__input-svg--phone" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                <path d="M17.9 9.75275H9.39999V10.9569H17.9L15.8 13.0641L16.7 13.9672L19.8 10.8565C19.8974 10.7263 19.95 10.5678 19.95 10.405C19.95 10.2421 19.8974 10.0837 19.8 9.95344L16.7 6.84277L15.8 7.74587L17.9 9.75275Z" fill="black"/>
+                <path d="M8.10001 19.7872V13.5659C8.08846 13.41 8.02154 13.2635 7.91142 13.153C7.80131 13.0425 7.65531 12.9754 7.50001 12.9638H3.10001C3.10516 13.2815 3.23325 13.5848 3.45718 13.8095C3.68112 14.0342 3.98336 14.1627 4.30001 14.1679H6.80001V19.1851H3.10001C2.86326 19.2 2.62591 19.1676 2.40176 19.0896C2.17762 19.0117 1.97115 18.8898 1.79436 18.7311C1.61757 18.5723 1.47399 18.3799 1.37196 18.165C1.26992 17.9501 1.21148 17.717 1.20001 17.4793V3.43111C1.19181 2.96681 1.36516 2.51774 1.68292 2.18013C2.00069 1.84252 2.43758 1.64322 2.90001 1.62492H6.80001V6.64212H4.40001C4.08336 6.64729 3.78112 6.77581 3.55718 7.00052C3.33325 7.22523 3.20516 7.52851 3.20001 7.84625H7.60001C7.75531 7.83466 7.90131 7.76751 8.01142 7.65701C8.12154 7.54651 8.18846 7.40002 8.20001 7.24418V0.922517C8.15232 0.76584 8.06117 0.626022 7.93721 0.519407C7.81325 0.412792 7.66161 0.343785 7.50001 0.320453H3.10001C2.70599 0.307054 2.31321 0.371716 1.94411 0.510744C1.57501 0.649771 1.23684 0.860436 0.948933 1.13069C0.661026 1.40095 0.42903 1.7255 0.266207 2.08579C0.103385 2.44608 0.01293 2.83504 1.46306e-05 3.23043V17.1782C-0.0289644 17.5773 0.0246504 17.978 0.157487 18.3552C0.290324 18.7324 0.499509 19.078 0.771886 19.3701C1.04426 19.6623 1.37394 19.8947 1.74019 20.0529C2.10643 20.211 2.50132 20.2913 2.90001 20.2889H7.50001C7.5735 20.304 7.64943 20.3022 7.72216 20.2839C7.7949 20.2655 7.86259 20.2309 7.92021 20.1828C7.97783 20.1346 8.02391 20.074 8.05504 20.0055C8.08616 19.9371 8.10153 19.8624 8.10001 19.7872Z" fill="black"/>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <rect width="20" height="20.0688" fill="white" transform="translate(0 0.320435)"/>
+                </clipPath>
+                </defs>
+              </svg>
             </li>
           </ul>
 
@@ -114,22 +132,22 @@
 
           <ul class="form__list form__list--optional">
             <li class="form__item form__item--optional">
-              <input class="form__checkbox-input" type="checkbox" id="sweetener" name="sugar-subtitute" checked>
+              <input class="form__checkbox-input visually-hidden" disabled type="checkbox" id="sweetener" name="sugar-subtitute" checked>
               <label class="form__label form__label--checkbox" for="sweetener">Сахарозаменитель</label>
             </li>
 
             <li class="form__item form__item--optional">
-              <input class="form__checkbox-input" type="checkbox" id="water" name="clean-water">
+              <input class="form__checkbox-input visually-hidden" type="checkbox" id="water" name="clean-water">
               <label class="form__label form__label--checkbox" for="water">Питьевая вода</label>
             </li>
 
             <li class="form__item form__item--optional">
-              <input class="form__checkbox-input" type="checkbox" id="mlk" name="milk">
+              <input class="form__checkbox-input visually-hidden" type="checkbox" id="mlk" name="milk">
               <label class="form__label form__label--checkbox" for="mlk">Молоко</label>
             </li>
 
             <li class="form__item form__item--optional">
-              <input class="form__checkbox-input" type="checkbox" id="vtmns" name="vitamins">
+              <input class="form__checkbox-input visually-hidden" type="checkbox" id="vtmns" name="vitamins">
               <label class="form__label form__label--checkbox" for="vtmns">Витамины</label>
             </li>
           </ul>
@@ -145,7 +163,7 @@
       <section class="contacts">
         <div class="contacts__wrapper">
           <p class="contacts__text">приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
         </div>
         <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1627216695943!5m2!1sru!2sru" width="100%" height="362" allowfullscreen></iframe>
       </section>
@@ -197,5 +215,6 @@
         </section>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

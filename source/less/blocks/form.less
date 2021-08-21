@@ -1,7 +1,5 @@
 .form {
   margin: 0;
-  outline: 2px solid @status_error;
-  outline-offset: -2px;
 }
 
 .form__text {
@@ -51,8 +49,6 @@
   padding: @mobile-padding;
   list-style: none;
   box-sizing: border-box;
-  outline: 2px solid @status_error;
-  outline-offset: -2px;
 
   @media (min-width: @tablet) {
     padding: @tablet-form-padding;
@@ -72,12 +68,13 @@
   &--radio {
     border-top: 1px solid @special_grey-6;
     border-bottom: 1px solid @special_grey-6;
-    padding: 22px 20px 20px 20px;
+    padding: 25px 65px;
 
     @media (min-width: @tablet) {
       margin: @tablet-form-padding;
       margin-bottom: 65px;
       border: 1px solid @special_grey-7;
+      padding: 30px 88px;
     }
 
     @media (min-width: @desktop) {
@@ -126,6 +123,12 @@
   display: flex;
   align-items: baseline;
   margin-top: 13px;
+  position: relative;
+
+  &--radio,
+  &--optional {
+    margin-top: 25px;
+  }
 
   @media (min-width: @tablet) {
     margin-top: 20px;
@@ -150,8 +153,6 @@
     width: @desktop-content;
     margin: 0 auto;
     margin-bottom: 65px;
-    outline: 2px solid @status_error;
-    outline-offset: -2px;
   }
 }
 
@@ -164,62 +165,111 @@
   white-space: nowrap;
   position: relative;
 
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &--radio {
-    margin-left: 15px;
-    margin-right: 0;
+    margin: 0;
   }
 
   &--checkbox {
-    margin-left: 15px;
+    margin-left: 44px;
     margin-right: 0;
+
+    @media (min-width: @tablet) {
+      margin-left: 59px;
+    }
   }
-}
-
-.form__radio-input + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-sizing: border-box;
-  border: 1px solid @special_grey;
-}
-
-.form__radio-input:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: @basic_green;
 }
 
 .form__checkbox-input + label::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 2px;
+  left: -44px;
+  top: -5px;
+  width: 30px;
+  height: 30px;
   box-sizing: border-box;
   border: 1px solid @special_grey;
+
+  @media (min-width: @tablet) {
+    width: 40px;
+    height: 40px;
+    left: -59px;
+  }
 }
 
 .form__checkbox-input:checked + label::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
   width: 26px;
   height: 26px;
+  left: -42px;
+  top: -2px;
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  @media (min-width: @tablet) {
+    left: -53px;
+    top: 4px;
+  }
+}
+
+.form__radio-input:hover + label::before,
+.form__checkbox-input:hover + label::before {
+  @media (min-width: @desktop) {
+    border-color: @special_grey-9;
+  }
+}
+
+.form__radio-input:disabled + label::before,
+.form__radio-input:disabled + label::after,
+.form__radio-input:disabled + label,
+.form__checkbox-input:disabled + label::before,
+.form__checkbox-input:disabled + label::after,
+.form__checkbox-input:disabled + label {
+  opacity: 0.3;
+}
+
+
+.form__radio-input + label::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1px solid @special_grey;
+
+  @media (min-width: @tablet) {
+    width: 40px;
+    height: 40px;
+    top: -5px;
+    left: -50px;
+  }
+}
+
+.form__radio-input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -32px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: @basic_green;
+
+  @media (min-width: @tablet) {
+    top: 6px;
+    left: -39px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .form__input {
@@ -234,6 +284,8 @@
   padding: 13px 12px 13px 15px;
 
   @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 30px;
     padding: 10px 20px;
   }
 
@@ -303,5 +355,27 @@
     width: @desktop-content;
     gap: 80px;
     padding: 0;
+  }
+}
+
+.form__input-svg {
+  position: absolute;
+
+  &--mail {
+    right: 15px;
+    top: 15px;
+
+    @media (min-width: @tablet) {
+      top: 18px;
+    }
+  }
+
+  &--phone {
+    top: 12px;
+    right: 13px;
+  }
+
+  @media (min-width: @tablet) {
+    top: 17px;
   }
 }
