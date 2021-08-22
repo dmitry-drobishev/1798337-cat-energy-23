@@ -5,10 +5,14 @@
   row-gap: 13px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 20px 0 25px 0;
   position: relative;
+  padding: @mobile-padding;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid @special_grey-2;
 
   @media (min-width: @tablet) {
+    border: none;
     min-height: 511px;
     display: flex;
     gap: 0;
@@ -30,18 +34,6 @@
       background-image: none;
       border: 2px solid @basic_grey;
       box-sizing: border-box;
-    }
-  }
-
-  @media (max-width: @mobile-max) {
-    &::after {
-      content: "";
-      width: 100vw;
-      right: -20px;
-      bottom: 0;
-      position: absolute;
-      height: 1px;
-      background-color: @special_grey-2;
     }
   }
 }
