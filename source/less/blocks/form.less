@@ -225,15 +225,10 @@
   }
 }
 
-.form__radio-input:disabled + label::before,
-.form__radio-input:disabled + label::after,
 .form__radio-input:disabled + label,
-.form__checkbox-input:disabled + label::before,
-.form__checkbox-input:disabled + label::after,
 .form__checkbox-input:disabled + label {
   opacity: 0.3;
 }
-
 
 .form__radio-input + label::before {
   content: "";
@@ -330,6 +325,7 @@
   width: min-content;
   background-color: @basic_white;
   white-space: nowrap;
+  box-sizing: border-box;
 
   @media (min-width: @tablet) {
     font-size: 36px;
@@ -366,7 +362,7 @@
   }
 }
 
-.form_subtitle-wrapper {
+.form__subtitle-wrapper {
   width: 100%;
   position: relative;
 
