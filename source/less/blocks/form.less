@@ -193,6 +193,10 @@
   height: 30px;
   box-sizing: border-box;
   border: 1px solid @special_grey;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px 26px;
 
   @media (min-width: @tablet) {
     width: 40px;
@@ -201,21 +205,8 @@
   }
 }
 
-.form__checkbox-input:checked + label::after {
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  left: -42px;
-  top: -2px;
-  background-image: url("../img/icon-tick.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
-  @media (min-width: @tablet) {
-    left: -53px;
-    top: 4px;
-  }
+.form__checkbox-input:not(:checked) + label::before {
+  background: none;
 }
 
 .form__radio-input:hover + label::before,
@@ -298,7 +289,6 @@
   &:focus {
     outline: 2px solid @special_dark-grey;
     outline-offset: -2px;
-    // border: 2px solid @special_dark-grey;
   }
 
   &:invalid {
@@ -316,32 +306,14 @@
   }
 }
 
-.form__subtitle {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 26px;
-  margin-left: 0;
-  padding: @mobile-padding;
-  width: min-content;
-  background-color: @basic_white;
-  white-space: nowrap;
-  box-sizing: border-box;
+.form__subtitle-wrapper {
+  .title-with-line-wrapper;
+}
 
-  @media (min-width: @tablet) {
-    font-size: 36px;
-    line-height: 36px;
-    padding: @tablet-form-padding;
-    padding-left: 30px;
-    margin-left: 40px;
-  }
+.form__subtitle {
+  .title-with-line;
 
   @media (min-width: @desktop) {
-    margin: 0 auto;
-    width: @desktop;
-    padding: 0;
-    padding-left: 40px;
-    background-color: transparent;
-
     &--contacts {
       background-image: linear-gradient(to right, @basic_white 0, @basic_white 593px, transparent 593px, transparent 100%);
     }
@@ -358,25 +330,6 @@
   & br {
     @media (min-width: @tablet) {
       display: none;
-    }
-  }
-}
-
-.form__subtitle-wrapper {
-  width: 100%;
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 2px;
-    top: 16px;
-    background-color: @basic_green;
-    z-index: -1;
-
-    @media (min-width: @tablet) {
-      top: 20px;
     }
   }
 }
