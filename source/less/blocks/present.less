@@ -1,22 +1,46 @@
 .present {
-  margin: 0;
+  width: 280px;
+  height: 289px;
+  background-image: url("../img/present/present-mobile.jpg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
   margin-top: 36px;
-  // padding: @mobile-padding;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/present/present-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet) {
-    // padding: @tablet-padding;
+    width: 708px;
+    height: 200px;
+    background-image: url("../img/present/present-tablet.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
     margin-top: 69px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/present/present-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop) {
+    width: 245px;
+    height: 289px;
+    background-image: url("../img/present/present-desktop.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
     padding: 0;
-    margin-top: 0;
+    margin: 0 0 0 auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/present/present-desktop@2x.jpg");
+    }
   }
 }
 
 .present__wrapper {
   padding: 58px 0 43px 0;
-  background-color: @basic_green;
 
   @media (min-width: @tablet) {
     display: flex;
