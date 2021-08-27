@@ -33,7 +33,7 @@
   height: 302px;
   width: 100%;
   background-image: url("../img/promo/promo-background-mobile.png");
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: @special_green-1;
@@ -124,7 +124,6 @@
     width: 709px;
     height: 609px;
     margin-top: -83px;
-    order: 3;
   }
 
   @media (min-width: @desktop) {
@@ -147,5 +146,12 @@
 
   @media (min-width: @tablet) {
     margin: 47px auto 0 0;
+    z-index: 1;
+  }
+}
+
+.promo picture {
+  @media (min-width: @tablet) {
+    order: 4;
   }
 }
