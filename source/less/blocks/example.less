@@ -1,11 +1,11 @@
 .example {
-  background-color: @special_grey-5;
+  background-color: @special-grey-5;
   margin: 0;
   margin-top: 42px;
 
   @media (min-width: @tablet) {
     background-color: transparent;
-    background-image: linear-gradient(to top, @special_grey-5 0, @special_grey-5 462px, transparent 462px, transparent 100%);
+    background-image: linear-gradient(to top, @special-grey-5 0, @special-grey-5 462px, transparent 462px, transparent 100%);
   }
 }
 
@@ -52,7 +52,7 @@
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  color: @special_dark-grey;
+  color: @special-dark-grey;
   margin: 0;
   margin-top: 33px;
 
@@ -112,7 +112,7 @@
   line-height: 24px;
   box-sizing: border-box;
   border-radius: 3px;
-  border: 1px solid @special_grey;
+  border: 1px solid @special-grey;
   margin: 0;
   padding: 15px 0 18px 0;
 
@@ -128,18 +128,18 @@
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 12px;
   line-height: 12px;
-  color: @special_dark-grey;
+  color: @special-dark-grey;
   margin: -10px auto 0 auto;
-  background-color: @special_grey-5;
+  background-color: @special-grey-5;
 
   @media (min-width: @tablet) {
     font-size: 14px;
     line-height: 14px;
-    background-color: @basic_white;
+    background-color: @basic-white;
   }
 
   @media (min-width: @desktop) {
-    background-color: @special_grey-5;
+    background-color: @special-grey-5;
   }
 }
 
@@ -216,10 +216,10 @@
 .example__slider-toggle {
   width: 84px;
   height: 14px;
-  border: 1px solid @special_grey;
+  border: 1px solid @special-grey;
   box-sizing: border-box;
   border-radius: 6px;
-  background-color: @basic_white;
+  background-color: @basic-white;
   margin: 0;
   padding: 3px 6px 3px 6px;
 
@@ -231,7 +231,7 @@
 .example__slider-handle {
   width: 35px;
   height: 6px;
-  background-color: @basic_green;
+  background-color: @basic-green;
   border-radius: 6px;
 
   &--before {
@@ -285,12 +285,12 @@
   @media (min-width: @tablet) {
     font-size: 20px;
     line-height: 30px;
-    border-bottom: 1px dotted @special_grey-8;
+    border-bottom: 1px dotted @special-grey-8;
   }
 
   @media (min-width: @desktop) {
     &:hover {
-      border-bottom: 1px solid fade(@special_grey-8, 30%);
+      border-bottom: 1px solid fade(@special-grey-8, 30%);
     }
 
     &:active {
@@ -312,14 +312,14 @@
 
 .example__range-scale {
   height: 6px;
-  background: @special_grey;
+  background: @special-grey;
   border-radius: 6px;
 }
 
 .example__range-toggle {
   width: 8px;
   height: 8px;
-  background-color: @basic_green;
+  background-color: @basic-green;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -335,9 +335,9 @@
   width: 34px;
   height: 34px;
   box-sizing: border-box;
-  background: @basic_white;
+  background: @basic-white;
   border-radius: 50%;
-  border: 1px solid @basic_grey;
+  border: 1px solid @basic-grey;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
 
   @media (min-width: @desktop) {
@@ -347,7 +347,7 @@
 
     &:active {
       filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
-      border: 1px solid @basic_green;
+      border: 1px solid @basic-green;
     }
   }
 }
