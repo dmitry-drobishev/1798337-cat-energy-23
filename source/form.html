@@ -2,6 +2,9 @@
 <html class="page" lang="ru">
   <head>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicons/apple.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
@@ -11,8 +14,11 @@
     <header class="page-header">
       <div class="page-header__row-wrapper">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-img" src="./img/logo-header-img.svg" width="34" height="38" alt="Логотип cat energy">
-          <img class="page-header__logo-title" src="./img/logo-header-title.svg" width="101" height="18" alt="Заголовок cat energy">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="./img/header-logo/logo-header-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/header-logo/logo-header-tablet.svg">
+            <img src="./img/header-logo/logo-header-mobile.svg" width="191" height="38" alt="Логотип cat energy">
+          </picture>
         </a>
 
         <button class="page-header__toggle page-header__toggle--close page-header__toggle--nojs" type="button">
