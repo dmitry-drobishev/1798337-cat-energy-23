@@ -66,14 +66,14 @@
   }
 
   &--radio {
-    border-top: 1px solid @special_grey-6;
-    border-bottom: 1px solid @special_grey-6;
+    border-top: 1px solid @special-grey-6;
+    border-bottom: 1px solid @special-grey-6;
     padding: 25px 65px;
 
     @media (min-width: @tablet) {
       margin: @tablet-form-padding;
       margin-bottom: 65px;
-      border: 1px solid @special_grey-7;
+      border: 1px solid @special-grey-7;
       padding: 30px 88px;
     }
 
@@ -160,7 +160,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: @special_dark-grey;
+  color: @special-dark-grey;
   margin-right: 10px;
   white-space: nowrap;
   position: relative;
@@ -192,7 +192,7 @@
   width: 30px;
   height: 30px;
   box-sizing: border-box;
-  border: 1px solid @special_grey;
+  border: 1px solid @special-grey;
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -212,7 +212,7 @@
 .form__radio-input:hover + label::before,
 .form__checkbox-input:hover + label::before {
   @media (min-width: @desktop) {
-    border-color: @special_grey-9;
+    border-color: @special-grey-9;
   }
 }
 
@@ -230,7 +230,7 @@
   height: 30px;
   border-radius: 50%;
   box-sizing: border-box;
-  border: 1px solid @special_grey;
+  border: 1px solid @special-grey;
 
   @media (min-width: @tablet) {
     width: 40px;
@@ -248,7 +248,7 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: @basic_green;
+  background-color: @basic-green;
 
   @media (min-width: @tablet) {
     top: 6px;
@@ -263,8 +263,8 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
-  border: 1px solid @special_grey-7;
-  color: @special_dark-grey;
+  border: 1px solid @special-grey-7;
+  color: @special-dark-grey;
   box-sizing: border-box;
   text-transform: uppercase;
   padding: 13px 12px 13px 15px;
@@ -282,27 +282,27 @@
 
   @media (min-width: @desktop) {
     &:hover {
-      border-color: @special_grey;
+      border-color: @special-grey;
     }
   }
 
   &:focus {
-    outline: 2px solid @special_dark-grey;
+    outline: 2px solid @special-dark-grey;
     outline-offset: -2px;
   }
 
   &:invalid {
-    outline-color: @status_error;
+    outline-color: @status-error;
   }
 
   &:focus + svg line,
   &:focus + svg path {
-    stroke: @basic_green;
+    stroke: @basic-green;
   }
 
   &:invalid + svg line,
   &:invalid + svg path {
-    stroke: @status_error;
+    stroke: @status-error;
   }
 }
 
@@ -315,15 +315,15 @@
 
   @media (min-width: @desktop) {
     &--contacts {
-      background-image: linear-gradient(to right, @basic_white 0, @basic_white 593px, transparent 593px, transparent 100%);
+      background-image: linear-gradient(to right, @basic-white 0, @basic-white 593px, transparent 593px, transparent 100%);
     }
 
     &--message {
-      background-image: linear-gradient(to right, @basic_white 0, @basic_white 259px, transparent 259px, transparent 100%);
+      background-image: linear-gradient(to right, @basic-white 0, @basic-white 259px, transparent 259px, transparent 100%);
     }
 
     &--optional {
-      background-image: linear-gradient(to right, @basic_white 0, @basic_white 292px, transparent 292px, transparent 100%);
+      background-image: linear-gradient(to right, @basic-white 0, @basic-white 292px, transparent 292px, transparent 100%);
     }
   }
 

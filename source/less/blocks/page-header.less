@@ -72,9 +72,6 @@
 }
 
 .page-header__logo {
-  display: flex;
-  align-items: center;
-  gap: 57px;
   cursor: pointer;
 
   @media (min-width: @desktop) {
@@ -85,5 +82,21 @@
     &:active {
       opacity: 0.6;
     }
+  }
+}
+
+.page-header__logo img {
+  display: block;
+  width: 191px;
+  height: 38px;
+
+  @media (min-width: @tablet) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 202px;
+    height: 59px;
   }
 }
