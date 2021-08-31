@@ -295,8 +295,11 @@
     outline-color: @status-error;
   }
 
-  &:focus + svg line,
-  &:focus + svg path {
+  &:focus + .form__input-svg--phone {
+    fill: @basic-green;
+  }
+
+  &:focus + .form__input-svg--mail {
     stroke: @basic-green;
   }
 
@@ -378,6 +381,7 @@
   &--mail {
     right: 15px;
     top: 15px;
+    stroke: @special-dark-grey-2;
 
     @media (min-width: @tablet) {
       top: 18px;
@@ -387,6 +391,7 @@
   &--phone {
     top: 12px;
     right: 13px;
+    fill: @special-dark-grey-2;
   }
 
   @media (min-width: @tablet) {

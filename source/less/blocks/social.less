@@ -9,11 +9,13 @@
 .social__list {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
   list-style: none;
   box-sizing: border-box;
   border-bottom: 1px solid @special-grey-6;
   border-top: 1px solid @special-grey-6;
-  padding: 6px 0 7px 0;
+  padding: 13px 0 14px 0;
   margin: 0;
 
   @media (min-width: @tablet) {
@@ -23,8 +25,11 @@
 }
 
 .social__link {
-  display: block;
-  padding: 17px;
+  display: flex;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: @desktop-content) {
     &:hover .social-icon {
@@ -34,5 +39,11 @@
     &:active .social-icon {
       opacity: 0.3;
     }
+  }
+}
+
+.social__icon {
+  @media (min-width: @tablet) {
+    transform: scale(1.5);
   }
 }
