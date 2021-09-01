@@ -1,6 +1,24 @@
 .contacts {
   position: relative;
   margin: 0;
+
+  &--catalog {
+    margin-top: 35px;
+    background-color: @basic-grey;
+
+    @media (min-width: @tablet) {
+      margin-top: 77px;
+    }
+  }
+
+  &--form {
+    margin-top: 32px;
+    background-color: @basic-grey;
+
+    @media (min-width: @tablet) {
+      margin-top: 76px;
+    }
+  }
 }
 
 .contacts__wrapper {
@@ -16,7 +34,7 @@
   @media (min-width: @tablet) {
     gap: 295px;
     padding: 0 70px;
-    min-height: 200px;
+    min-height: 201px;
   }
 
   @media (min-width: @desktop) {

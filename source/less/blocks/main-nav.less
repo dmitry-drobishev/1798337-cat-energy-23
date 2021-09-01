@@ -35,7 +35,7 @@
 
   @media (min-width: @desktop) {
     width: 478px;
-    margin: 0;
+    margin-top: 2px;
   }
 }
 
@@ -76,6 +76,11 @@
     &:not(.main-nav__link--active):active {
       opacity: 0.3;
     }
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 20px;
+    line-height: 30px;
   }
 
   &--active::after {

@@ -2,15 +2,15 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 13px;
+  row-gap: 11px;
   box-sizing: border-box;
   margin: 0 auto;
   position: relative;
   padding: @mobile-padding;
   padding-top: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
   border-bottom: 1px solid @special-grey-2;
-  min-height: 190px;
+  min-height: 209px;
 
   @media (min-width: @tablet) {
     border: none;
@@ -23,7 +23,7 @@
   }
 
   &--last {
-    min-height: 205px;
+    min-height: 208px;
     display: flex;
     gap: 0;
     flex-direction: column;
@@ -56,6 +56,7 @@
 .product-card__img {
   display: block;
   margin: auto;
+  margin-top: 12px;
 
   @media (min-width: @tablet) {
     align-self: flex-end;
@@ -109,12 +110,14 @@
   @media (min-width: @desktop) {
     width: 145px;
     line-height: 21px;
+    margin-top: 37px;
   }
 
   &--last {
     width: 100%;
     text-align: center;
     margin-top: 23px;
+
 
     @media (min-width: @tablet) {
       width: 135px;
@@ -131,11 +134,17 @@
   line-height: 16px;
   color: @special-dark-grey;
   margin: 0;
-  margin-top: 18px;
+  margin-top: 14px;
+  border-spacing: 0;
 
   @media (min-width: @tablet) {
     font-size: 16px;
-    margin-top: 21px;
+    margin-top: 13px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 15px;
     margin-bottom: 25px;
   }
 }
@@ -143,6 +152,7 @@
 .product-card__table td {
   margin: 0;
   padding: 0;
+  margin-bottom: -5px;
 
   @media (min-width: @tablet) {
     border-bottom: 1px solid @special-grey;
@@ -180,6 +190,7 @@
 .product-card__icon {
   display: block;
   margin: 0 auto;
+  margin-top: 5px;
 
   @media (min-width: @tablet) {
     margin-top: 52px;
