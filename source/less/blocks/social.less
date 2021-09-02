@@ -28,26 +28,32 @@
   }
 }
 
+.social__icon {
+  @media (min-width: @tablet) {
+    transform: scale(1.4);
+  }
+}
+
 .social__link {
   display: flex;
   width: 35px;
   height: 35px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   @media (min-width: @desktop-content) {
-    &:hover .social-icon {
+    &:hover .social__icon {
       fill: @basic-green;
+
+      &--facebook {
+        fill: none;
+        stroke: @basic-green;
+      }
     }
 
     &:active .social-icon {
       opacity: 0.3;
     }
-  }
-}
-
-.social__icon {
-  @media (min-width: @tablet) {
-    transform: scale(1.4);
   }
 }
