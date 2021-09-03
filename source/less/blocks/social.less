@@ -29,6 +29,13 @@
 }
 
 .social__icon {
+  fill: @special-grey-3;
+
+  &--facebook {
+    fill: none;
+    stroke: @special-grey-3;
+  }
+
   @media (min-width: @tablet) {
     transform: scale(1.4);
   }
@@ -52,7 +59,7 @@
       }
     }
 
-    &:active .social-icon {
+    &:active .social__icon {
       opacity: 0.3;
     }
   }

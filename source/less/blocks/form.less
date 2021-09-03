@@ -310,10 +310,6 @@
     outline-offset: -2px;
   }
 
-  &:invalid {
-    outline-color: @status-error;
-  }
-
   &:focus + .form__input-svg--phone {
     fill: @basic-green;
   }
@@ -322,8 +318,15 @@
     stroke: @basic-green;
   }
 
-  &:invalid + svg line,
-  &:invalid + svg path {
+  &:invalid {
+    outline-color: @status-error;
+  }
+
+  &:invalid + .form__input-svg--phone {
+    fill: @status-error;
+  }
+
+  &:invalid + .form__input-svg--mail {
     stroke: @status-error;
   }
 }
@@ -405,6 +408,7 @@
   &--mail {
     right: 15px;
     top: 15px;
+    fill: none;
     stroke: @special-dark-grey-2;
 
     @media (min-width: @tablet) {
