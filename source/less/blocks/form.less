@@ -18,7 +18,8 @@
     margin-bottom: 39px;
 
     @media (min-width: @tablet) {
-      margin-top: 54px;
+      margin-top: 55px;
+      margin-bottom: 64px;
       padding: @tablet-form-padding;
     }
 
@@ -45,7 +46,7 @@
 
 .form__list {
   margin: 0 auto;
-  margin-bottom: 26px;
+  margin-bottom: 23px;
   padding: @mobile-padding;
   list-style: none;
   box-sizing: border-box;
@@ -60,6 +61,10 @@
   }
 
   &--questionnaire {
+    @media (min-width: @tablet) {
+      margin-bottom: 73px;
+    }
+
     @media (min-width: @desktop) {
       margin: 0;
     }
@@ -68,11 +73,11 @@
   &--radio {
     border-top: 1px solid @special-grey-6;
     border-bottom: 1px solid @special-grey-6;
-    padding: 25px 65px;
+    padding: 27px 15px 25px 65px;
 
     @media (min-width: @tablet) {
       margin: @tablet-form-padding;
-      margin-bottom: 65px;
+      margin-bottom: 75px;
       border: 1px solid @special-grey-7;
       padding: 30px 88px;
     }
@@ -86,7 +91,8 @@
     margin-top: 35px;
 
     @media (min-width: @tablet) {
-      margin-top: 76px;
+      margin-top: 74px;
+      margin-bottom: 65px;
     }
 
     @media (min-width: @desktop) {
@@ -95,26 +101,29 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: baseline;
+      margin-top: 55px;
+      margin-bottom: 68px;
     }
   }
 
   &--optional {
-    margin-top: 34px;
-    margin-bottom: 34px;
+    margin-top: 37px;
+    margin-bottom: 40px;
 
     @media (min-width: @tablet) {
       display: grid;
-      gap: 60px;
+      gap: 59px;
       grid-template-columns: 1fr 1fr;
-      row-gap: 32px;
-      margin-top: 57px;
-      margin-bottom: 54px;
+      row-gap: 42px;
+      margin-top: 60px;
+      margin-bottom: 62px;
     }
 
     @media (min-width: @desktop) {
       width: @desktop-content;
       gap: 80px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin-bottom: 72px;
     }
   }
 }
@@ -132,6 +141,10 @@
 
   @media (min-width: @tablet) {
     margin-top: 20px;
+
+    &--radio {
+      margin-top: 23px;
+    }
   }
 
   &--optional {
@@ -152,7 +165,7 @@
     gap: 80px;
     width: @desktop-content;
     margin: 0 auto;
-    margin-bottom: 65px;
+    margin-bottom: 70px;
   }
 }
 
@@ -161,7 +174,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @special-dark-grey;
-  margin-right: 10px;
+  margin-right: 13px;
   white-space: nowrap;
   position: relative;
 
@@ -175,7 +188,7 @@
   }
 
   &--checkbox {
-    margin-left: 44px;
+    margin-left: 46px;
     margin-right: 0;
 
     @media (min-width: @tablet) {
@@ -187,7 +200,7 @@
 .form__checkbox-input + label::before {
   content: "";
   position: absolute;
-  left: -44px;
+  left: -45px;
   top: -5px;
   width: 30px;
   height: 30px;
@@ -225,7 +238,7 @@
   content: "";
   position: absolute;
   top: -5px;
-  left: -40px;
+  left: -45px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -236,7 +249,7 @@
     width: 40px;
     height: 40px;
     top: -5px;
-    left: -50px;
+    left: -59px;
   }
 }
 
@@ -244,7 +257,7 @@
   content: "";
   position: absolute;
   top: 3px;
-  left: -32px;
+  left: -37px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -252,7 +265,7 @@
 
   @media (min-width: @tablet) {
     top: 6px;
-    left: -39px;
+    left: -48px;
     width: 18px;
     height: 18px;
   }
@@ -269,15 +282,21 @@
   text-transform: uppercase;
   padding: 13px 12px 13px 15px;
 
+  &--textarea {
+    height: 150px;
+    resize: none;
+    padding: 9px 5px 5px 14px;
+  }
+
   @media (min-width: @tablet) {
     font-size: 20px;
     line-height: 30px;
     padding: 10px 20px;
-  }
 
-  &--textarea {
-    height: 150px;
-    resize: none;
+    &--textarea {
+      height: 174px;
+      padding: 9px 5px 5px 19px;
+    }
   }
 
   @media (min-width: @desktop) {
@@ -291,17 +310,23 @@
     outline-offset: -2px;
   }
 
+  &:focus + .form__input-svg--phone {
+    fill: @basic-green;
+  }
+
+  &:focus + .form__input-svg--mail {
+    stroke: @basic-green;
+  }
+
   &:invalid {
     outline-color: @status-error;
   }
 
-  &:focus + svg line,
-  &:focus + svg path {
-    stroke: @basic-green;
+  &:invalid + .form__input-svg--phone {
+    fill: @status-error;
   }
 
-  &:invalid + svg line,
-  &:invalid + svg path {
+  &:invalid + .form__input-svg--mail {
     stroke: @status-error;
   }
 }
@@ -314,6 +339,8 @@
   .title-with-line;
 
   @media (min-width: @desktop) {
+    padding-left: 31px;
+
     &--contacts {
       background-image: linear-gradient(to right, @basic-white 0, @basic-white 593px, transparent 593px, transparent 100%);
     }
@@ -353,6 +380,9 @@
   @media (min-width: @tablet) {
     width: 100%;
     margin: 0;
+    font-size: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 
@@ -378,6 +408,8 @@
   &--mail {
     right: 15px;
     top: 15px;
+    fill: none;
+    stroke: @special-dark-grey-2;
 
     @media (min-width: @tablet) {
       top: 18px;
@@ -387,6 +419,7 @@
   &--phone {
     top: 12px;
     right: 13px;
+    fill: @special-dark-grey-2;
   }
 
   @media (min-width: @tablet) {
