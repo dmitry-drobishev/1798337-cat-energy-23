@@ -3,20 +3,20 @@
   gap: 14px;
   min-height: 117px;
   box-sizing: border-box;
-  border-bottom: 1px solid @special-grey-5;
   border-top: 1px solid @special-grey-4;
   margin: 0;
-  padding-top: 13px;
+  padding-top: 12px;
   padding-bottom: 19px;
 
   @media (min-width: @tablet) {
-    padding: 27px 38px;
+    min-height: 139px;
+    gap: 23px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 25px 38px;
     border: 1px solid @special-grey;
     border-bottom: none;
-
-    &:last-child {
-      border-bottom: 1px solid @special-grey;
-    }
   }
 
   @media (min-width: @desktop) {
@@ -30,6 +30,14 @@
 
     &:first-child {
       border-top: 1px solid @special-grey-5;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 1px solid @special-grey-5;
+
+    @media (min-width: @tablet) {
+      border-bottom: 1px solid @special-grey;
     }
   }
 }
@@ -53,12 +61,13 @@
   margin: 0;
 
   @media (min-width: @tablet) {
-    font-size: 16px;
-    line-height: 20px;
+    // margin-top: 5px;
+    gap: 50px;
   }
 
   @media (min-width: @desktop) {
     display: grid;
+    gap: 0;
     grid-template-columns: 244px 82px;
   }
 }
@@ -68,6 +77,11 @@
   font-size: 14px;
   line-height: 14px;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .card__text-price {
@@ -75,14 +89,25 @@
   font-size: 14px;
   line-height: 14px;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .card__button {
   width: 100%;
 
+  @media (min-width: @tablet) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
   @media (min-width: @desktop) {
     width: 245px;
     height: 40px;
     box-sizing: border-box;
+    grid-column: auto;
   }
 }

@@ -9,29 +9,57 @@
 .social__list {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
   list-style: none;
   box-sizing: border-box;
   border-bottom: 1px solid @special-grey-6;
   border-top: 1px solid @special-grey-6;
-  padding: 6px 0 7px 0;
+  padding: 13px 0 14px 0;
   margin: 0;
 
   @media (min-width: @tablet) {
     border: none;
     padding: 0;
   }
+
+  @media (min-width: @tablet) {
+    margin-left: 27px;
+  }
+}
+
+.social__icon {
+  fill: @special-grey-3;
+
+  &--facebook {
+    fill: none;
+    stroke: @special-grey-3;
+  }
+
+  @media (min-width: @tablet) {
+    transform: scale(1.4);
+  }
 }
 
 .social__link {
-  display: block;
-  padding: 17px;
+  display: flex;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 
   @media (min-width: @desktop-content) {
-    &:hover path {
+    &:hover .social__icon {
       fill: @basic-green;
+
+      &--facebook {
+        fill: none;
+        stroke: @basic-green;
+      }
     }
 
-    &:active {
+    &:active .social__icon {
       opacity: 0.3;
     }
   }
