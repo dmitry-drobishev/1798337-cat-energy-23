@@ -164,13 +164,13 @@ const build = gulp.series(
     createWebp,
     sprite
   ),
- );
+);
 
- exports.build = build;
+exports.build = build;
 
 //  Default
 
- exports.default = gulp.series(
+exports.default = gulp.series(
   clean,
   copy,
   copyImages,
