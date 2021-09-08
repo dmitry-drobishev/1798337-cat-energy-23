@@ -31,9 +31,6 @@ const styles = () => {
     .pipe(sync.stream());
 }
 
-exports.styles = styles;
-
-
 // HTMLmin
 
 const html = () => {
@@ -41,8 +38,6 @@ const html = () => {
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
-
-exports.html = html;
 
 // Scripts
 
@@ -52,8 +47,6 @@ const scripts = () => {
     .pipe(rename("scripts.min.js"))
     .pipe(gulp.dest("build/js"));
 }
-
-exports.scripts = scripts;
 
 // Images
 
@@ -70,8 +63,6 @@ const copyImages = () => {
     .pipe(gulp.dest("build/img"));
 }
 
-exports.copyImages = copyImages;
-
 // Webp
 
 const createWebp = () => {
@@ -79,8 +70,6 @@ const createWebp = () => {
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 }
-
-exports.createWebp = createWebp;
 
 // Copy
 
@@ -97,8 +86,6 @@ const copy = (done) => {
   done();
  }
 
- exports.copy = copy;
-
 //  Sprite
 
 const sprite = () => {
@@ -110,15 +97,11 @@ const sprite = () => {
     .pipe(gulp.dest("build/img"));
 }
 
-exports.sprite = sprite;
-
 //  Clean
 
 const clean = () => {
   return del("build");
 };
-
-exports.clean = clean;
 
 // Server
 
@@ -134,14 +117,12 @@ const server = (done) => {
   done();
 }
 
-exports.server = server;
-
  // Reload
+
  const reload = done => {
   sync.reload();
   done();
  }
-
 
 // Watcher
 

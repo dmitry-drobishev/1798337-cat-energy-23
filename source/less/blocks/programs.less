@@ -33,14 +33,15 @@
 
 .programs__list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  gap: 21px;
+  gap: 18px;
   list-style: none;
   margin: 0;
   padding: 0;
 
   @media (min-width: @tablet) {
-    gap: 35px;
+    gap: 30px;
   }
 
   @media (min-width: @desktop) {
@@ -50,6 +51,7 @@
 }
 
 .programs__item {
+  min-height: 266px;
   width: 100%;
   padding: @mobile-padding;
   padding-top: 23px;
@@ -59,6 +61,7 @@
   margin: 0 auto;
 
   @media (min-width: @tablet) {
+    min-height: 372px;
     box-sizing: border-box;
     padding: 77px 316px 53px 52px;
     position: relative;
@@ -82,7 +85,7 @@
   @media (min-width: @tablet) {
     position: absolute;
     right: 62px;
-    top: 92px;
+    top: 90px;
     width: 200px;
     height: 200px;
   }

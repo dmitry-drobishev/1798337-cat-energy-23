@@ -5,6 +5,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./img/favicons/apple.png">
+    <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
@@ -68,7 +69,7 @@
 
       <section class="promo">
         <div class="promo__content-wrapper">
-          <h2 class="promo__title">Функциональное питание для котов</h2>
+          <h2 class="promo__title">Функциональное<br>питание для котов</h2>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <picture>
             <source media="(min-width: 1280px)" srcset="./img/promo/promo-food-desktop.webp 1x, ./img/promo/promo-food-desktop@2x.webp 2x">
@@ -148,7 +149,7 @@
             <div class="information__background-icon">
               <img class="information__img" src="./img/information/logo-information-4.svg" width="32" height="33" alt="Изображение весов">
             </div>
-            <p class="information__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <p class="information__text">Уже через месяц наслаждайтесь изменениями к лучшему<br>вашего питомца!</p>
             <p class="information__number">4</p>
           </li>
         </ul>
@@ -159,13 +160,13 @@
         <div class="example__wrapper">
           <div class="example__information-wrapper">
             <h2 class="example__title">Живой пример</h2>
-            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.</p>
 
             <div class="example__specification-result-wrapper">
               <ul class="example__specification-list">
                 <li class="example__specification-item">
                   <p class="example__specification-value">5 кг</p>
-                  <p class="example__specification-name">снижение <br> веса</p>
+                  <p class="example__specification-name example__specification-name--weight">снижение веса</p>
                 </li>
 
                 <li class="example__specification-item">
@@ -272,6 +273,6 @@
         </section>
       </div>
     </footer>
-    <script src="./js/script.min.js"></script>
+    <script src="./js/scripts.min.js"></script>
   </body>
 </html>
