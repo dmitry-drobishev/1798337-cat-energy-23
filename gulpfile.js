@@ -56,8 +56,6 @@ const optimizeImages = () => {
     .pipe(gulp.dest("build/img"));
 }
 
-exports.optimizeImages = optimizeImages;
-
 const copyImages = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(gulp.dest("build/img"));
@@ -127,8 +125,8 @@ const server = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/js/*.js", gulp.series("scripts"));
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
