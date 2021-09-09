@@ -16,7 +16,7 @@
 
 .example__wrapper {
   padding-top: 27px;
-  padding-bottom: 36px;
+  padding-bottom: 37px;
   margin: 0 auto;
 
   @media (min-width: @tablet) {
@@ -69,13 +69,14 @@
 
   @media (min-width: @desktop) {
     margin-top: 146px;
+    width: 436px;
   }
 }
 
 .example__specification-result-wrapper {
   @media (min-width: @tablet) {
     display: flex;
-    gap: 167px;
+    gap: 162px;
     justify-content: center;
     align-items: center;
     margin-top: 54px;
@@ -120,12 +121,13 @@
   border-radius: 3px;
   border: 1px solid @special-grey;
   margin: 0;
-  padding: 14px 0 18px 0;
+  padding: 14px 0 16px 0;
   text-transform: uppercase;
 
   @media (min-width: @tablet) {
     font-size: 30px;
     line-height: 37px;
+    padding-bottom: 18px;
   }
 }
 
@@ -136,7 +138,7 @@
   font-size: 12px;
   line-height: 12px;
   color: @special-dark-grey;
-  margin: -10px auto 0 auto;
+  margin: -9px auto 0 auto;
   background-color: @special-grey-5;
   padding: 0 5px;
   box-sizing: border-box;
@@ -173,15 +175,20 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 20px;
     text-align: end;
     margin-top: -8px;
   }
 
   @media (min-width: @desktop) {
+    flex-direction: row;
+    gap: 60px;
     line-height: 20px;
-    margin-top: 50px;
+    margin-top: 53px;
     text-align: start;
   }
 }
@@ -213,7 +220,7 @@
 
   @media (min-width: @tablet) {
     display: block;
-    width: 354px;
+    width: 285px;
   }
 }
 
@@ -223,6 +230,11 @@
   @media (min-width: @tablet) {
     display: block;
     width: 354px;
+  }
+
+  @media (min-width: @desktop) {
+    display: block;
+    width: 362px;
   }
 }
 
@@ -240,11 +252,13 @@
   margin-top: 30px;
 
   @media (min-width: @tablet) {
-    margin-top: 21px;
+    margin-top: 19px;
   }
 
   @media (min-width: @desktop) {
     margin-top: 34px;
+    margin-right: 0;
+    margin-left: auto;
   }
 }
 
@@ -296,6 +310,10 @@
       object-position: left;
       margin-right: 0;
     }
+
+    @media (min-width: @desktop) {
+      width: 362px;
+    }
   }
 
   &--after {
@@ -304,6 +322,10 @@
       object-fit: cover;
       object-position: right;
       margin-left: 0;
+    }
+
+    @media (min-width: @desktop) {
+      width: 270px;
     }
   }
 }
