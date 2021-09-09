@@ -9,7 +9,7 @@ const rename = require("gulp-rename");
 const csso = require("postcss-csso");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
-const squoosh = require("gulp-libsquoosh");
+// const squoosh = require("gulp-libsquoosh");
 const webp = require("gulp-webp");
 const del = require("del");
 const svgstore = require("gulp-svgstore");
@@ -50,11 +50,11 @@ const scripts = () => {
 
 // Images
 
-const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
-    .pipe(squoosh())
-    .pipe(gulp.dest("build/img"));
-}
+// const optimizeImages = () => {
+//   return gulp.src("source/img/**/*.{jpg,png,svg}")
+//     .pipe(squoosh())
+//     .pipe(gulp.dest("build/img"));
+// }
 
 const copyImages = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
