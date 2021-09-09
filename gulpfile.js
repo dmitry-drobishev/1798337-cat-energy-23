@@ -135,7 +135,7 @@ const watcher = () => {
 const build = gulp.series(
   clean,
   copy,
-  optimizeImages,
+  copyImages,
   gulp.parallel(
     styles,
     html,
