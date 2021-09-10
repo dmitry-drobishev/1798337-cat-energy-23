@@ -33,14 +33,15 @@
 
 .programs__list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  gap: 21px;
+  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
 
   @media (min-width: @tablet) {
-    gap: 35px;
+    gap: 30px;
   }
 
   @media (min-width: @desktop) {
@@ -50,6 +51,7 @@
 }
 
 .programs__item {
+  min-height: 266px;
   width: 100%;
   padding: @mobile-padding;
   padding-top: 23px;
@@ -59,6 +61,7 @@
   margin: 0 auto;
 
   @media (min-width: @tablet) {
+    min-height: 372px;
     box-sizing: border-box;
     padding: 77px 316px 53px 52px;
     position: relative;
@@ -78,11 +81,12 @@
   height: 50px;
   border-radius: 50%;
   background-color: @basic-green;
+  position: relative;
 
   @media (min-width: @tablet) {
     position: absolute;
     right: 62px;
-    top: 92px;
+    top: 90px;
     width: 200px;
     height: 200px;
   }
@@ -100,6 +104,7 @@
   &--slim {
     width: 36px;
     height: 50px;
+    top: -2px;
 
     @media (min-width: @tablet) {
       width: 140px;
@@ -152,7 +157,7 @@
   color: @special-dark-grey;
   margin: 0;
   margin-top: 24px;
-  padding-bottom: 23px;
+  padding-bottom: 22px;
   border-bottom: 1px solid @special-grey-6;
 
   @media (min-width: @tablet) {

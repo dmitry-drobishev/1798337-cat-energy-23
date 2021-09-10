@@ -9,7 +9,7 @@ const rename = require("gulp-rename");
 const csso = require("postcss-csso");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
-const squoosh = require("gulp-libsquoosh");
+// const squoosh = require("gulp-libsquoosh");
 const webp = require("gulp-webp");
 const del = require("del");
 const svgstore = require("gulp-svgstore");
@@ -31,9 +31,6 @@ const styles = () => {
     .pipe(sync.stream());
 }
 
-exports.styles = styles;
-
-
 // HTMLmin
 
 const html = () => {
@@ -41,8 +38,6 @@ const html = () => {
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
-
-exports.html = html;
 
 // Scripts
 
@@ -53,24 +48,18 @@ const scripts = () => {
     .pipe(gulp.dest("build/js"));
 }
 
-exports.scripts = scripts;
-
 // Images
 
-const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
-    .pipe(squoosh())
-    .pipe(gulp.dest("build/img"));
-}
-
-exports.optimizeImages = optimizeImages;
+// const optimizeImages = () => {
+//   return gulp.src("source/img/**/*.{jpg,png,svg}")
+//     .pipe(squoosh())
+//     .pipe(gulp.dest("build/img"));
+// }
 
 const copyImages = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(gulp.dest("build/img"));
 }
-
-exports.copyImages = copyImages;
 
 // Webp
 
@@ -79,8 +68,6 @@ const createWebp = () => {
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 }
-
-exports.createWebp = createWebp;
 
 // Copy
 
@@ -97,8 +84,6 @@ const copy = (done) => {
   done();
  }
 
- exports.copy = copy;
-
 //  Sprite
 
 const sprite = () => {
@@ -110,15 +95,11 @@ const sprite = () => {
     .pipe(gulp.dest("build/img"));
 }
 
-exports.sprite = sprite;
-
 //  Clean
 
 const clean = () => {
   return del("build");
 };
-
-exports.clean = clean;
 
 // Server
 
@@ -134,20 +115,18 @@ const server = (done) => {
   done();
 }
 
-exports.server = server;
-
  // Reload
+
  const reload = done => {
   sync.reload();
   done();
  }
 
-
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/js/*.js", gulp.series("scripts"));
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
@@ -156,7 +135,7 @@ const watcher = () => {
 const build = gulp.series(
   clean,
   copy,
-  optimizeImages,
+  copyImages,
   gulp.parallel(
     styles,
     html,
