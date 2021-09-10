@@ -1,40 +1,41 @@
 .present {
   width: 280px;
   height: 289px;
-  background-image: url("../img/present/present-mobile.jpg");
+  background-image: url("../img/background-img/present-mobile.jpg");
   background-size: auto 100%;
   background-repeat: no-repeat;
   margin: 0 auto;
   margin-top: 35px;
+  background-color: @special-green-1;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/present/present-mobile@2x.jpg");
+    background-image: url("../img/background-img/present-mobile@2x.jpg");
   }
 
   @media (min-width: @tablet) {
     width: 708px;
     height: 200px;
-    background-image: url("../img/present/present-tablet.jpg");
+    background-image: url("../img/background-img/present-tablet.jpg");
     background-size: auto 100%;
     background-repeat: no-repeat;
     margin-top: 69px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/present/present-tablet@2x.jpg");
+      background-image: url("../img/background-img/present-tablet@2x.jpg");
     }
   }
 
   @media (min-width: @desktop) {
     width: 245px;
     height: 289px;
-    background-image: url("../img/present/present-desktop.jpg");
+    background-image: url("../img/background-img/present-desktop.jpg");
     background-size: auto 100%;
     background-repeat: no-repeat;
     padding: 0;
     margin: 0 0 0 auto;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/present/present-desktop@2x.jpg");
+      background-image: url("../img/background-img/present-desktop@2x.jpg");
     }
   }
 }
@@ -45,7 +46,6 @@
   @media (min-width: @tablet) {
     display: flex;
     gap: 265px;
-    // justify-content: center;
     align-items: center;
     padding: 57px 0 61px 0;
     margin: 0 auto;
