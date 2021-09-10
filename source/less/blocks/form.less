@@ -99,9 +99,9 @@
       width: @desktop-content;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      gap: 78px;
       align-items: baseline;
-      margin-top: 55px;
+      margin-top: 53px;
       margin-bottom: 68px;
     }
   }
@@ -116,7 +116,7 @@
       grid-template-columns: 1fr 1fr;
       row-gap: 42px;
       margin-top: 60px;
-      margin-bottom: 62px;
+      margin-bottom: 60px;
     }
 
     @media (min-width: @desktop) {
@@ -181,6 +181,7 @@
   @media (min-width: @tablet) {
     font-size: 20px;
     line-height: 30px;
+    margin-right: 17px;
   }
 
   &--radio {
@@ -303,6 +304,10 @@
     &:hover {
       border-color: @special-grey;
     }
+
+    &--phone {
+      padding-left: 13px;
+    }
   }
 
   &:focus {
@@ -338,8 +343,16 @@
 .form__subtitle {
   .title-with-line;
 
+  @media (min-width: @tablet) {
+    padding-right: 41px;
+    margin-left: 30px;
+    padding-left: 40px;
+  }
+
   @media (min-width: @desktop) {
-    padding-left: 31px;
+    margin: 0 auto;
+    padding: 0;
+    padding-left: 30px;
 
     &--contacts {
       background-image: linear-gradient(to right, @basic-white 0, @basic-white 593px, transparent 593px, transparent 100%);
@@ -381,8 +394,8 @@
     width: 100%;
     margin: 0;
     font-size: 20px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 }
 

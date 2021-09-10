@@ -29,13 +29,19 @@
   margin-bottom: 36px;
 
   @media (min-width: @tablet) {
-    margin-top: 68px;
-    margin-bottom: 80px;
+    margin: 68px 0 80px 32px;
+    padding: 0 38px 0 34px;
+    background-image: linear-gradient(to right, @basic-white 0, @basic-white 200px, transparent 200px, transparent 100%);
   }
 
   @media (min-width: @desktop) {
+    padding: 0;
+    margin: 0 auto;
     margin-top: 79px;
+    margin-bottom: 80px;
     padding-left: 30px;
+
+
     background-image: linear-gradient(to right, @basic-white 0, @basic-white 413px, transparent 413px, transparent 100%);
   }
 }
