@@ -99,6 +99,35 @@
   }
 }
 
+.contacts__map-wrapper {
+  background: url("../img/background-img/location-mobile.png") center center no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/background-img/location-mobile@2x.png") center center no-repeat;
+    background-size: 320px 362px;
+  }
+
+  @media (min-width: @tablet) {
+    background: url("../img/background-img/location-tablet.png") center center no-repeat;
+    background-size: 768px 400px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background-img/location-tablet@2x.png") center center no-repeat;
+      background-size: 768px 400px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    background: url("../img/background-img/location-desktop.png") center center no-repeat;
+    background-size: auto 400px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background-img/location-desktop@2x.png") center center no-repeat;
+      background-size: auto 400px;
+    }
+  }
+}
+
 .contacts__map {
   border: 0;
   width: 100%;
